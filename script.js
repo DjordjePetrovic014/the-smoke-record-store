@@ -11,7 +11,7 @@ let filteredAlbumsGlobal = [];
 let scenarioAlbumPool = [];
 
 function getFilteredPool(albums, selectedScope, selectedGenre, watchedAlbums) {
-  // 1️⃣ Scope – da li se gleda cela radnja ili watched lista
+  // 1️⃣ Scope – does it consider the entire store or just the watched list?
   const scoped =
     selectedScope === "watched"
       ? albums.filter((a) => watchedAlbums.includes(a.id))
