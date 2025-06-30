@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Smoke Record Store</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Lato&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <button class="hamburger-toggle mobile-only" id="hamburgerBtn" aria-label="Toggle menu">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256"><path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM40,72H216a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16ZM216,184H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Z"></path></svg>
+            </button>
+            <!--  Dark background overlay -->
+<div id="mobileOverlay" class="mobile-overlay hidden"></div>
+
+      <div class="header-background-layer"></div>
+      <video autoplay muted playsinline class="background-video">
+        <source src="videos/smoke-video.mp4" type="video/mp4" />
+      </video>
+      <div class="overlay">
+        <img src="images/Logo/start11.png" alt="The Smoke Record Store Logo" class="logo-icon" />
+      </div>
+
+
+      <nav class="main-nav" id="mainNav">
+        <ul class="nav-list">
+          <li class="intro-only about"><a href="#">About Project</a></li>
+          <li class="intro-only contact"><a href="#">Contact</a></li>
+          <li class="sticky-only sticky-dropdown formats-dropdown">
+            <a href="#" class="formats-toggle">
+              <div class="nav-item formats">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="32"
+                  height="32"
+                  viewBox="0 0 256 256"
+                >
+                  <path
+                    d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm0-144a56.06,56.06,0,0,0-56,56,8,8,0,0,1-16,0,72.08,72.08,0,0,1,72-72,8,8,0,0,1,0,16Zm72,56a72.08,72.08,0,0,1-72,72,8,8,0,0,1,0-16,56.06,56.06,0,0,0,56-56,8,8,0,0,1,16,0Zm-40,0a32,32,0,1,0-32,32A32,32,0,0,0,160,128Zm-48,0a16,16,0,1,1,16,16A16,16,0,0,1,112,128Z"
+                  ></path>
+                </svg>
+                <span class="formats-label">Formats</span>
+              </div>
+            </a>
+            <ul class="formats-menu">
+              <li><a href="#">All</a></li>
+              <li><a href="#">Vinyls</a></li>
+              <li><a href="#">CDs</a></li>
+            </ul>
+          </li>
+
+          <li class="sticky-only sticky-dropdown genres-dropdown">
+            <a href="#" class="genres-toggle">
+              <div class="nav-item genres">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="32"
+                  height="32"
+                  viewBox="0 0 256 256"
+                >
+                  <path
+                    d="M249.66,46.34l-40-40a8,8,0,0,0-11.31,11.32L200.69,20,140.52,80.16C117.73,68.3,92.21,69.29,76.75,84.74a42.27,42.27,0,0,0-9.39,14.37A8.24,8.24,0,0,1,59.81,104c-14.59.49-27.26,5.72-36.65,15.11C11.08,131.22,6,148.6,8.74,168.07,11.4,186.7,21.07,205.15,36,220s33.34,24.56,52,27.22A71.13,71.13,0,0,0,98.1,248c15.32,0,28.83-5.23,38.76-15.16,9.39-9.39,14.62-22.06,15.11-36.65a8.24,8.24,0,0,1,4.92-7.55,42.12,42.12,0,0,0,14.37-9.39c15.45-15.46,16.44-41,4.58-63.77L236,55.31l2.34,2.34a8,8,0,1,0,11.32-11.31ZM160,167.93a26.12,26.12,0,0,1-8.95,5.83,24.24,24.24,0,0,0-15,21.89c-.36,10.46-4,19.41-10.43,25.88-8.44,8.43-21,11.95-35.36,9.89C75,229.25,59.73,221.19,47.27,208.73S26.75,181,24.58,165.81c-2-14.37,1.46-26.92,9.89-35.36C40.94,124,49.89,120.37,60.35,120h0a24.22,24.22,0,0,0,21.89-15,26.12,26.12,0,0,1,5.83-9c5.49-5.49,13-8.13,21.38-8.13a49.38,49.38,0,0,1,19.13,4.19L108.5,112.19a32,32,0,1,0,35.31,35.31l20.08-20.08C170.41,142.71,169.47,158.41,160,167.93Zm-10.4-61.48a72.9,72.9,0,0,1,5.93,6.75l-15.42,15.42a32.22,32.22,0,0,0-12.68-12.68l15.42-15.43A73,73,0,0,1,149.55,106.45ZM112,128a16,16,0,0,1,16,16h0a16,16,0,1,1-16-16Zm48.85-32.85a86.94,86.94,0,0,0-6.68-6L176,67.31,188.69,80l-21.83,21.82A86.94,86.94,0,0,0,160.86,95.14ZM200,68.68,187.32,56,212,31.31,224.69,44ZM93.66,194.33a8,8,0,0,1-11.31,11.32l-32-32a8,8,0,0,1,11.32-11.31Z"
+                  ></path>
+                </svg>
+                <span class="genres-label">Genres</span>
+              </div>
+            </a>
+
+            <ul class="genres-menu">
+              <li><a href="#">All</a></li>
+              <li><a href="#">Rock</a></li>
+              <li><a href="#">Blues</a></li>
+              <li><a href="#">Jazz</a></li>
+              <li><a href="#">Hip-hop</a></li>
+              <li><a href="#">Other</a></li>
+            </ul>
+          </li>
+
+          <li class="sticky-only watch-btn">
+            <a href="#">
+              <div class="nav-item watched">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="32"
+                  height="32"
+                  viewBox="0 0 256 256"
+                >
+                  <path
+                    d="M247.31,124.76c-.35-.79-8.82-19.58-27.65-38.41C194.57,61.26,162.88,48,128,48S61.43,61.26,36.34,86.35C17.51,105.18,9,124,8.69,124.76a8,8,0,0,0,0,6.5c.35.79,8.82,19.57,27.65,38.4C61.43,194.74,93.12,208,128,208s66.57-13.26,91.66-38.34c18.83-18.83,27.3-37.61,27.65-38.4A8,8,0,0,0,247.31,124.76ZM128,192c-30.78,0-57.67-11.19-79.93-33.25A133.47,133.47,0,0,1,25,128,133.33,133.33,0,0,1,48.07,97.25C70.33,75.19,97.22,64,128,64s57.67,11.19,79.93,33.25A133.46,133.46,0,0,1,231.05,128C223.84,141.46,192.43,192,128,192Zm0-112a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160Z"
+                  ></path>
+                </svg>
+                <span class="watched-label">Watched</span>
+                <span id="watchCount" class="count-badge"></span>
+              </div>
+            </a>
+            <div id="watchPanel" class="cart-panel hidden">
+              <h2>Watched Albums</h2>
+              <div id="watchItems"></div>
+            </div>
+          </li>
+
+          <!-- Intro mode BB  -->
+          <li class="intro-only budget-pulse budget">
+            <a href="#" id="bbIntroBtn">Budget Button</a>
+          </li>
+
+          <!-- Sticky mode BB dugme -->
+          <li class="sticky-only budget-pulse budget">
+            <a href="#" id="bbStickyBtn">
+              <div class="nav-item budget">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="32"
+                  height="32"
+                  viewBox="0 0 256 256"
+                >
+                  <path
+                    d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm40-68a28,28,0,0,1-28,28h-4v8a8,8,0,0,1-16,0v-8H104a8,8,0,0,1,0-16h36a12,12,0,0,0,0-24H116a28,28,0,0,1,0-56h4V72a8,8,0,0,1,16,0v8h16a8,8,0,0,1,0,16H116a12,12,0,0,0,0,24h24A28,28,0,0,1,168,148Z"
+                  ></path>
+                </svg>
+                <span class="budget-label">Budget Button</span>
+              </div>
+            </a>
+          </li>
+
+          <!-- ✅ Cart button + panel -->
+          <li class="sticky-only cart-btn">
+            <a href="#">
+              <div class="nav-item cart">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="32"
+                  height="32"
+                  viewBox="0 0 256 256"
+                >
+                  <path
+                    d="M230.14,58.87A8,8,0,0,0,224,56H62.68L56.6,22.57A8,8,0,0,0,48.73,16H24a8,8,0,0,0,0,16h18L67.56,172.29a24,24,0,0,0,5.33,11.27,28,28,0,1,0,44.4,8.44h45.42A27.75,27.75,0,0,0,160,204a28,28,0,1,0,28-28H91.17a8,8,0,0,1-7.87-6.57L80.13,152h116a24,24,0,0,0,23.61-19.71l12.16-66.86A8,8,0,0,0,230.14,58.87ZM104,204a12,12,0,1,1-12-12A12,12,0,0,1,104,204Zm96,0a12,12,0,1,1-12-12A12,12,0,0,1,200,204Zm4-74.57A8,8,0,0,1,196.1,136H77.22L65.59,72H214.41Z"
+                  ></path>
+                </svg>
+                <span class="cart-label">Cart</span>
+                <span id="cartCount" class="count-badge"></span>
+              </div>
+            </a>
+            <div id="cartPanel" class="cart-panel hidden">
+              <h2>Your Cart</h2>
+              <div id="cartItems"></div>
+              <div id="cartTotal" class="cart-total"></div>
+            </div>
+          </li>
+        </ul>
+      </nav>
+      <!-- Mobile side menu – portrait mode only -->
+<nav class="side-menu mobile-only" id="sideMenu">
+  <ul class="side-menu-list">
+    <!-- Formats -->
+    <li class="side-section">
+      <div class="side-label">
+         <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="32"
+                  height="32"
+                  viewBox="0 0 256 256"
+                >
+                  <path
+                    d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm0-144a56.06,56.06,0,0,0-56,56,8,8,0,0,1-16,0,72.08,72.08,0,0,1,72-72,8,8,0,0,1,0,16Zm72,56a72.08,72.08,0,0,1-72,72,8,8,0,0,1,0-16,56.06,56.06,0,0,0,56-56,8,8,0,0,1,16,0Zm-40,0a32,32,0,1,0-32,32A32,32,0,0,0,160,128Zm-48,0a16,16,0,1,1,16,16A16,16,0,0,1,112,128Z"
+                  ></path>
+                </svg>
+        <span>Formats</span>
+      </div>
+       <ul class="side-submenu">
+        <li><a href="#" data-format="All">All</a></li>
+    <li><a href="#" data-format="Vinyl">Vinyls</a></li>
+    <li><a href="#" data-format="CD">CDs</a></li>
+  </ul>
+    </li>
+
+    <!-- Genres -->
+    <li class="side-section">
+      <div class="side-label">
+        <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="32"
+                  height="32"
+                  viewBox="0 0 256 256"
+                >
+                  <path
+                    d="M249.66,46.34l-40-40a8,8,0,0,0-11.31,11.32L200.69,20,140.52,80.16C117.73,68.3,92.21,69.29,76.75,84.74a42.27,42.27,0,0,0-9.39,14.37A8.24,8.24,0,0,1,59.81,104c-14.59.49-27.26,5.72-36.65,15.11C11.08,131.22,6,148.6,8.74,168.07,11.4,186.7,21.07,205.15,36,220s33.34,24.56,52,27.22A71.13,71.13,0,0,0,98.1,248c15.32,0,28.83-5.23,38.76-15.16,9.39-9.39,14.62-22.06,15.11-36.65a8.24,8.24,0,0,1,4.92-7.55,42.12,42.12,0,0,0,14.37-9.39c15.45-15.46,16.44-41,4.58-63.77L236,55.31l2.34,2.34a8,8,0,1,0,11.32-11.31ZM160,167.93a26.12,26.12,0,0,1-8.95,5.83,24.24,24.24,0,0,0-15,21.89c-.36,10.46-4,19.41-10.43,25.88-8.44,8.43-21,11.95-35.36,9.89C75,229.25,59.73,221.19,47.27,208.73S26.75,181,24.58,165.81c-2-14.37,1.46-26.92,9.89-35.36C40.94,124,49.89,120.37,60.35,120h0a24.22,24.22,0,0,0,21.89-15,26.12,26.12,0,0,1,5.83-9c5.49-5.49,13-8.13,21.38-8.13a49.38,49.38,0,0,1,19.13,4.19L108.5,112.19a32,32,0,1,0,35.31,35.31l20.08-20.08C170.41,142.71,169.47,158.41,160,167.93Zm-10.4-61.48a72.9,72.9,0,0,1,5.93,6.75l-15.42,15.42a32.22,32.22,0,0,0-12.68-12.68l15.42-15.43A73,73,0,0,1,149.55,106.45ZM112,128a16,16,0,0,1,16,16h0a16,16,0,1,1-16-16Zm48.85-32.85a86.94,86.94,0,0,0-6.68-6L176,67.31,188.69,80l-21.83,21.82A86.94,86.94,0,0,0,160.86,95.14ZM200,68.68,187.32,56,212,31.31,224.69,44ZM93.66,194.33a8,8,0,0,1-11.31,11.32l-32-32a8,8,0,0,1,11.32-11.31Z"
+                  ></path>
+                </svg>
+        <span>Genres</span>
+      </div>
+      <ul class="side-submenu">
+        <li><a href="#" data-genre="All">All</a></li>
+    <li><a href="#" data-genre="Rock">Rock</a></li>
+    <li><a href="#" data-genre="Blues">Blues</a></li>
+    <li><a href="#" data-genre="Jazz">Jazz</a></li>
+    <li><a href="#" data-genre="Hip-hop">Hip-hop</a></li>
+    <li><a href="#" data-genre="Other">Other</a></li>
+  </ul>
+    </li>
+
+    <!-- Apply Filters button -->
+    <li class="side-section">
+      <button class="apply-filters-btn">Apply Filters</button>
+      <button class="reset-filters-btn">Reset Filters</button>
+
+    </li>
+
+    <!-- Watch, Budget, Cart - Side menu Phone only -->
+    <li class="side-section side-bottom-links">
+  <a href="#" class="side-link mobile-watch-btn">
+    <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="32"
+                  height="32"
+                  viewBox="0 0 256 256"
+                >
+                  <path
+                    d="M247.31,124.76c-.35-.79-8.82-19.58-27.65-38.41C194.57,61.26,162.88,48,128,48S61.43,61.26,36.34,86.35C17.51,105.18,9,124,8.69,124.76a8,8,0,0,0,0,6.5c.35.79,8.82,19.57,27.65,38.4C61.43,194.74,93.12,208,128,208s66.57-13.26,91.66-38.34c18.83-18.83,27.3-37.61,27.65-38.4A8,8,0,0,0,247.31,124.76ZM128,192c-30.78,0-57.67-11.19-79.93-33.25A133.47,133.47,0,0,1,25,128,133.33,133.33,0,0,1,48.07,97.25C70.33,75.19,97.22,64,128,64s57.67,11.19,79.93,33.25A133.46,133.46,0,0,1,231.05,128C223.84,141.46,192.43,192,128,192Zm0-112a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160Z"
+                  ></path>
+                </svg>
+    <span>Watched</span>
+  </a>
+  <a href="#" class="side-link mobile-bb-btn">
+      <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="32"
+                  height="32"
+                  viewBox="0 0 256 256"
+                >
+                  <path
+                    d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm40-68a28,28,0,0,1-28,28h-4v8a8,8,0,0,1-16,0v-8H104a8,8,0,0,1,0-16h36a12,12,0,0,0,0-24H116a28,28,0,0,1,0-56h4V72a8,8,0,0,1,16,0v8h16a8,8,0,0,1,0,16H116a12,12,0,0,0,0,24h24A28,28,0,0,1,168,148Z"
+                  ></path>
+                </svg>
+    <span>Budget Button</span>
+  </a>
+  <a href="#" class="side-link mobile-cart-btn">
+     <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="32"
+                  height="32"
+                  viewBox="0 0 256 256"
+                >
+                  <path
+                    d="M230.14,58.87A8,8,0,0,0,224,56H62.68L56.6,22.57A8,8,0,0,0,48.73,16H24a8,8,0,0,0,0,16h18L67.56,172.29a24,24,0,0,0,5.33,11.27,28,28,0,1,0,44.4,8.44h45.42A27.75,27.75,0,0,0,160,204a28,28,0,1,0,28-28H91.17a8,8,0,0,1-7.87-6.57L80.13,152h116a24,24,0,0,0,23.61-19.71l12.16-66.86A8,8,0,0,0,230.14,58.87ZM104,204a12,12,0,1,1-12-12A12,12,0,0,1,104,204Zm96,0a12,12,0,1,1-12-12A12,12,0,0,1,200,204Zm4-74.57A8,8,0,0,1,196.1,136H77.22L65.59,72H214.41Z"
+                  ></path>
+                </svg>
+    <span>Cart</span>
+  </a>
+</li>
+
+  </ul>
+</nav>
+
+      <!-- Mobile dimming overlay -->
+<div class="mobile-overlay hidden"></div>
+
+      <div class="logo-stub sticky-only">
+        <img
+          src="images/Logo/start11.png"
+          alt="The Smoke Record Store Logo"
+          class="logo-stub-img"
+        />
+      </div>
+      <div class="top-info-bar sticky-only">
+ 
+    <span class="top-icons">
+      <!-- mail icon -->
+      <a href="mailto:djolevukas@gmail.com" title="Email">
+       <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256"><path d="M128,24a104,104,0,0,0,0,208c21.51,0,44.1-6.48,60.43-17.33a8,8,0,0,0-8.86-13.33C166,210.38,146.21,216,128,216a88,88,0,1,1,88-88c0,26.45-10.88,32-20,32s-20-5.55-20-32V88a8,8,0,0,0-16,0v4.26a48,48,0,1,0,5.93,65.1c6,12,16.35,18.64,30.07,18.64,22.54,0,36-17.94,36-48A104.11,104.11,0,0,0,128,24Zm0,136a32,32,0,1,1,32-32A32,32,0,0,1,128,160Z"></path></svg>
+      </a>
+
+      <!-- github icon -->
+      <a href="https://github.com/thesmokerecordstore" target="_blank" title="GitHub">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256"><path d="M208.31,75.68A59.78,59.78,0,0,0,202.93,28,8,8,0,0,0,196,24a59.75,59.75,0,0,0-48,24H124A59.75,59.75,0,0,0,76,24a8,8,0,0,0-6.93,4,59.78,59.78,0,0,0-5.38,47.68A58.14,58.14,0,0,0,56,104v8a56.06,56.06,0,0,0,48.44,55.47A39.8,39.8,0,0,0,96,192v8H72a24,24,0,0,1-24-24A40,40,0,0,0,8,136a8,8,0,0,0,0,16,24,24,0,0,1,24,24,40,40,0,0,0,40,40H96v16a8,8,0,0,0,16,0V192a24,24,0,0,1,48,0v40a8,8,0,0,0,16,0V192a39.8,39.8,0,0,0-8.44-24.53A56.06,56.06,0,0,0,216,112v-8A58.14,58.14,0,0,0,208.31,75.68ZM200,112a40,40,0,0,1-40,40H112a40,40,0,0,1-40-40v-8a41.74,41.74,0,0,1,6.9-22.48A8,8,0,0,0,80,73.83a43.81,43.81,0,0,1,.79-33.58,43.88,43.88,0,0,1,32.32,20.06A8,8,0,0,0,119.82,64h32.35a8,8,0,0,0,6.74-3.69,43.87,43.87,0,0,1,32.32-20.06A43.81,43.81,0,0,1,192,73.83a8.09,8.09,0,0,0,1,7.65A41.72,41.72,0,0,1,200,104Z"></path></svg>
+      </a>
+          <span class="pipe-separator"> | </span>
+  <span class="listen-label">Listen us:</span>
+          <span class="top-icons">
+             <a href="https://tidal.com/playlist/ccb94338-934c-4782-9e2d-73e1c7cd3362" target="_blank">
+              <img
+                src="images/streaming-services-logo/tidal-logo-svg-white.png"
+                alt="Tidal"
+              />
+            </a>
+            <a href="https://spotify.com" target="_blank">
+              <img
+                src="images/streaming-services-logo/spotify-logo-svg.svg"
+                alt="Spotify"
+              />
+            </a>
+            <a href="https://link.deezer.com/s/30k6s4edjDfgRkuKp392y" target="_blank">
+              <img
+                src="images/streaming-services-logo/deezer-logo-svg.png"
+                alt="Deezer"
+              />
+            </a>
+           
+            <a href="https://music.youtube.com/playlist?list=PLZ6jhb9OcSoX1iidaWgB7SCCJ8kLXpXUJ&si=WENEf21o93caBs3n" target="_blank">
+              <img
+                src="images/streaming-services-logo/yt-music-logo.svg"
+                alt="YMusic"
+              />
+            </a>
+            <!-- <a href="https://music.apple.com" target="_blank">
+              <img
+                src="images/streaming-services-logo/apple-music-logo-white.png"
+                alt="Apple Music"
+              />
+            </a> -->
+          </span>
+       
+      </div>
+    </header>
+
+    <!-- About Project Panel -->
+    <div id="aboutFadeLayer" class="fade-layer hidden"></div>
+
+    <section id="aboutUsPanel" class="about-us hidden">
+      <div class="about-us-overlay">
+        <div class="about-section-flex">
+          <!-- Left column -->
+          <div class="about-column">
+            <div class="about-box about-text">
+              <h3>Born From a Passion for Music</h3>
+              <p>
+                The Smoke Record Store was imagined as a personal space for
+                vinyl and CD lovers, built around the idea of exploring music
+                beyond algorithms.
+              </p>
+              <p>
+                It's a project shaped by years of music collecting and a growing
+                fascination with web technologies. Each feature reflects
+                something I'd want to use myself.
+              </p>
+              <p>
+                More than a portfolio - this is my honest attempt at creating a
+                digital record-digging experience.
+              </p>
+            </div>
+            <div class="about-box about-image">
+              <img
+                src="images/about-us-section/vinyl-store-picture-01.jpg"
+                alt="The Smoke Record Store Record Store Picture"
+              />
+            </div>
+          </div>
+
+          <!-- Middle column -->
+          <div class="about-column">
+            <div class="about-box about-image">
+              <img
+                src="images/about-us-section/vinyl-store-picture-02.jpg"
+                alt="The Smoke Record Store Choosing Vinyl"
+              />
+            </div>
+            <div class="about-box about-testimonials">
+              <blockquote>
+                “This place breathes music. And that BB. Great!”
+                <span>- E. Vedder</span>
+              </blockquote>
+              <blockquote>
+                “Finally, a site that feels like a real record store.”
+                <span>- S.R. Vaughn</span>
+              </blockquote>
+              <blockquote>
+                “Found three hidden gems I didn't know I needed.”
+                <span>- K. Ritchards</span>
+              </blockquote>
+              <blockquote>
+                “This place breathes music.”
+                <span>- E. Vedder</span>
+              </blockquote>
+              <blockquote>
+                “Smart features, real collector's spirit.”
+                <span>- P. McCartney</span>
+              </blockquote>
+              <blockquote>
+                “It's not just a store - it's a vibe.”
+                <span>- T. Waits</span>
+              </blockquote>
+            </div>
+          </div>
+
+          <!-- Right column -->
+          <div class="about-column">
+            <div class="about-box about-text">
+              <h3>What's the <span class="bb-span-colored">Budget Button </span>?</h3>
+              <p>
+                <span class="bb-span-colored">BB</span> is a custom feature designed to help you discover
+                the best album combinations based on your preferences - within a
+                budget.
+              </p>
+              <p>
+                It uses a scoring system that balances stock, format, price, and
+                genre - offering a smart, curated mix instead of a generic
+                filter.
+              </p>
+              <p>
+                Built for collectors, diggers, and music explorers who want more
+                for less.
+              </p>
+            </div>
+            <div class="about-box about-image">
+              <img
+                src="images/about-us-section/vinyl-store-picture-03.jpg"
+                alt="The Smoke Record Store Playing Vinyl"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="scroll-to-shop arrow-down">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="white"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="arrow-icon"
+          >
+            <path d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Panel -->
+    <div id="contactFadeLayer" class="fade-layer hidden"></div>
+
+    <section id="contactPanel" class="contact-panel hidden">
+      <video autoplay muted loop playsinline class="contact-video-bg">
+        <source src="videos/contact-background-video.mp4" type="video/mp4" />
+      </video>
+
+      <div class="contact-overlay">
+        <div class="contact-center streaming-icons">
+          <div class="streaming-icons-row">
+            <a
+              href="https://tidal.com/playlist/ccb94338-934c-4782-9e2d-73e1c7cd3362"
+              target="_blank"
+            >
+              <img
+                src="images/streaming-services-logo/tidal-logo-svg.svg"
+                alt="Tidal"
+              />
+            </a>
+            <a href="https://spotify.com" target="_blank">
+              <img
+                src="images/streaming-services-logo/spotify-logo-svg.svg"
+                alt="Spotify"
+              />
+            </a>
+            <a href="https://link.deezer.com/s/30k6s4edjDfgRkuKp392y" target="_blank">
+              <img
+                src="images/streaming-services-logo/deezer-logo-svg.png"
+                alt="Deezer"
+              />
+            </a>
+            <a
+              href="https://music.youtube.com/playlist?list=PLZ6jhb9OcSoX1iidaWgB7SCCJ8kLXpXUJ&si=WENEf21o93caBs3n"
+              target="_blank"
+            >
+              <img
+                src="images/streaming-services-logo/yt-music-logo.svg"
+                alt="YMusic"
+              />
+            </a>
+            <!-- <a href="https://music.apple.com" target="_blank">
+              <img
+                src="images/streaming-services-logo/apple-music-logo-psd.png"
+                alt="Apple Music"
+              />
+            </a> -->
+          </div>
+
+          <div class="contact-links">
+            <a href="mailto:djolevukas@gmail.com">djolevukas@gmail.com</a>
+            <span class="divider">|</span>
+            <a href="https://github.com/thesmokerecordstore" target="_blank"
+              >GitHub</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="scroll-to-shop arrow-down">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="white"
+          stroke-width="1.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="arrow-icon"
+        >
+          <path d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+        </svg>
+      </div>
+    </section>
+
+    <!-- Budget Button Intro Panel -->
+    <div id="bbIntroFadeLayer" class="fade-layer hidden"></div>
+
+    <section id="bbIntroPanel" class="bb-intro-panel hidden">
+      <video autoplay muted loop playsinline class="bb-intro-video">
+        <source
+          src="videos/bb-intro-section-vu-meter-video.mp4"
+          type="video/mp4"
+        />
+      </video>
+
+      <div class="bb-intro-overlay">
+        <div class="bb-intro-center">
+          <p class="bb-line">Pick your favorite genre.</p>
+          <p class="bb-line">Chose your preferred format.</p>
+          <p class="bb-line">Set your budget.</p>
+          <p class="bb-line">Let the <span class="bb-span-colored">BB</span> do the magic.</p>
+          <p class="bb-line">Enjoy your music!</p>
+        </div>
+      </div>
+
+      <div class="scroll-to-shop arrow-down">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="white"
+          stroke-width="1.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="arrow-icon"
+        >
+          <path d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+        </svg>
+      </div>
+    </section>
+
+    <!-- Budget Button Budget Panel -->
+    <div id="bbBudgetFadeLayer" class="fade-layer hidden"></div>
+
+    <section id="bbBudgetPanel" class="bb-budget-panel hidden">
+      <video autoplay muted playsinline class="bb-budget-video-bg">
+        <source src="videos/smoke-video.mp4" />
+      </video>
+
+      <div class="bb-budget-overlay">
+        <div class="bb-budget-center">
+          <h2>Insert your budget in USD</h2>
+
+          <label for="budgetInput">Budget ($):</label>
+          <input
+            type="number"
+            id="budgetInput"
+            placeholder="e.g. 25"
+            min="1"
+            step="1"
+          />
+
+          <div class="budget-options-grid">
+            <!-- Look in -->
+            <div class="budget-option-column">
+              <h3>Look in:</h3>
+              <label
+                ><input type="radio" name="scope" value="all" checked /> Whole
+                Store</label
+              >
+              <label
+                ><input type="radio" name="scope" value="watched" />
+                Watched</label
+              >
+            </div>
+
+            <!-- Formats -->
+            <div class="budget-option-column">
+              <h3>Formats:</h3>
+              <label
+                ><input type="radio" name="format" value="all" checked /> All
+                Formats</label
+              >
+              <label
+                ><input type="radio" name="format" value="vinyl" />
+                Vinyls</label
+              >
+              <label><input type="radio" name="format" value="cd" /> CDs</label>
+            </div>
+
+            <!-- Genres -->
+            <div class="budget-option-column">
+              <h3>Genres:</h3>
+              <label
+                ><input type="radio" name="genre" value="all" checked />
+                All</label
+              >
+              <label
+                ><input type="radio" name="genre" value="rock" /> Rock</label
+              >
+              <label
+                ><input type="radio" name="genre" value="blues" /> Blues</label
+              >
+              <label
+                ><input type="radio" name="genre" value="jazz" /> Jazz</label
+              >
+              <label
+                ><input type="radio" name="genre" value="hip-hop" />
+                Hip-hop</label
+              >
+              <label
+                ><input type="radio" name="genre" value="other" /> Other</label
+              >
+            </div>
+          </div>
+
+          <button id="confirmBudgetBtn" class="smoke-it-btn">Smoke It!</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Budget Button Results Panel -->
+    <div id="bbResultsFadeLayer" class="fade-layer hidden"></div>
+
+    <section id="bbResultsPanel" class="bb-results-panel hidden">
+      <div class="bb-results-overlay">
+        <button
+          id="closeBBResultsBtn"
+          class="bb-close-btn"
+          aria-label="Close BB Panel"
+        >
+          ✕
+        </button>
+
+        <div class="bb-results-center">
+          <h2>Your Budget Picks</h2>
+          <p class="bb-placeholder-text">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia
+            magnam sequi ullam.
+          </p>
+          <!--  5 BB PICK CARD-->
+          <div id="bbResultsGrid" class="bb-results-grid">
+            <!-- TSRS Pick 1 -->
+            <div class="bb-pick-card" id="bbPick1">
+              <div class="bb-pick-header">TSRS Pick 1</div>
+              <div class="bb-pick-albums">
+                <!-- Albums go here via JS -->
+              </div>
+              <div class="bb-pick-total">
+                <p>Total: $<span class="bb-pick-sum">0.00</span></p>
+              </div>
+              <button class="bb-pick-add-btn">Add to Cart</button>
+            </div>
+
+            <!-- TSRS Pick 2 -->
+            <div class="bb-pick-card" id="bbPick2">
+              <div class="bb-pick-header">TSRS Pick 2</div>
+              <div class="bb-pick-albums"></div>
+              <div class="bb-pick-total">
+                <p>Total: $<span class="bb-pick-sum">0.00</span></p>
+              </div>
+              <button class="bb-pick-add-btn">Add to Cart</button>
+            </div>
+
+            <!-- TSRS Pick 3 -->
+            <div class="bb-pick-card" id="bbPick3">
+              <div class="bb-pick-header">TSRS Pick 3</div>
+              <div class="bb-pick-albums"></div>
+              <div class="bb-pick-total">
+                <p>Total: $<span class="bb-pick-sum">0.00</span></p>
+              </div>
+              <button class="bb-pick-add-btn">Add to Cart</button>
+            </div>
+
+            <!-- TSRS Pick 4 -->
+            <div class="bb-pick-card" id="bbPick4">
+              <div class="bb-pick-header">TSRS Pick 4</div>
+              <div class="bb-pick-albums"></div>
+              <div class="bb-pick-total">
+                <p>Total: $<span class="bb-pick-sum">0.00</span></p>
+              </div>
+              <button class="bb-pick-add-btn">Add to Cart</button>
+            </div>
+
+            <!-- TSRS Pick 5 -->
+            <div class="bb-pick-card" id="bbPick5">
+              <div class="bb-pick-header">TSRS Pick 5</div>
+              <div class="bb-pick-albums"></div>
+              <div class="bb-pick-total">
+                <p>Total: $<span class="bb-pick-sum">0.00</span></p>
+              </div>
+              <button class="bb-pick-add-btn">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Publisher Bar -->
+
+    <div class="publisher-bar">
+      <img
+        src="images/publishers-logo/atlantic-records-logo-png-transparent.png"
+        alt="Atlantic Records Logo"
+        class="publisher-logo"
+      />
+      <img
+        src="images/publishers-logo/blue-note-music-group-logo.png"
+        alt="Blue Note Music Group Logo"
+        class="publisher-logo"
+      />
+      <img
+        src="images/publishers-logo/chess-logo.png"
+        alt="Chess Logo"
+        class="publisher-logo"
+      />
+      <img
+        src="images/publishers-logo/def-jam-music-group-logo.png"
+        alt="Def Jam Music Group Logo"
+        class="publisher-logo"
+      />
+      <img
+        src="images/publishers-logo/epic-records-logo-black-and-white-old-epic.png"
+        alt="Epic Records Logo"
+        class="publisher-logo"
+      />
+      <img
+        src="images/publishers-logo/island-records-logo.png"
+        alt="Island Records Logo"
+        class="publisher-logo"
+      />
+      <img
+        src="images/publishers-logo/motown-logo.png"
+        alt="Motown Logo"
+        class="publisher-logo"
+      />
+      <img
+        src="images/publishers-logo/sony-music-logo-wordmark-.png"
+        alt="Sony Music Logo"
+        class="publisher-logo"
+      />
+
+      <img
+        src="images/publishers-logo/verve-logo.png"
+        alt="Verve Logo"
+        class="publisher-logo"
+      />
+      <img
+        src="images/publishers-logo/warner-music-group-logo.png"
+        alt="Warner Music Logo"
+        class="publisher-logo"
+      />
+    </div>
+
+    <div class="album-grid" id="albumGrid"></div>
+    <div class="pagination" id="pagination"></div>
+
+    <!-- Vinyl vs CD Block -->
+
+    <section id="vinylVsCdBlock">
+      <div class="vinyl-vs-cd-container">
+        <div class="vinyl-image">
+          <img
+            src="images/vinyl-vs-cd/turntable-player.jpg"
+            alt="Vinyl record Turntable"
+          />
+        </div>
+        <div class="comparison-text">
+          <div class="chat-container">
+            <div class="message vinyl">
+              <span class="icon">🎵</span>
+              <div class="bubble">Hello, youngster!</div>
+            </div>
+            <div class="message cd">
+              <div class="bubble">Hello, Old dog! Whats up?</div>
+              <span class="icon">💿</span>
+            </div>
+            <div class="message vinyl">
+              <span class="icon">🎵</span>
+              <div class="bubble">You do know I'm better than you, right?</div>
+            </div>
+            <div class="message cd">
+              <div class="bubble">😂😂😂</div>
+              <span class="icon">💿</span>
+            </div>
+            <div class="message vinyl">
+              <span class="icon">🎵</span>
+              <div class="bubble">
+                No, trust me, I'm better — my analog signal preserves harmonic
+                richness, my bass has more depth, and my overall sound feels
+                more organic and natural to the ear.
+              </div>
+            </div>
+            <div class="message cd">
+              <div class="bubble">
+                Come on — I deliver 16-bit / 44.1 kHz precision with zero
+                surface noise and 96 dB of clean, lossless dynamic range. You
+                squeak, pop, and distort if someone sneezes too close.
+              </div>
+              <span class="icon">💿</span>
+            </div>
+            <div class="message vinyl">
+              <span class="icon">🎵</span>
+              <div class="bubble">You're just data. You have no soul.</div>
+            </div>
+            <div class="message cd">
+              <div class="bubble">
+                You're bulky, fragile, and need constant care like a newborn — I
+                have to clean you, flip you, and stand up four times just to
+                finish one album. Oh, and how exactly do you sound in a car?
+              </div>
+              <span class="icon">💿</span>
+            </div>
+            <div class="message vinyl">
+              <span class="icon">🎵</span>
+              <div class="bubble">Same as you — through Bluetooth.</div>
+            </div>
+            <div class="message cd">
+              <div class="bubble">
+                Budget Button says you're way too expensive. 🤔
+              </div>
+              <span class="icon">💿</span>
+            </div>
+            <div class="message vinyl">
+              <span class="icon">🎵</span>
+              <div class="bubble">
+                You got it wrong. BB says the most expensive thing… is the one
+                that's no longer in stock 😎
+              </div>
+            </div>
+            <div class="message cd">
+              <div class="bubble">Alright then, fine — let's ask him.</div>
+              <span class="icon">💿</span>
+            </div>
+            <div class="message vinyl">
+              <span class="icon">🎵</span>
+              <div class="bubble">Alright, c'mon</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="cd-image">
+          <img src="images/vinyl-vs-cd/cd-player.jpg" alt="CD player disc " />
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer  -->
+
+    <footer class="footer">
+      <p>&copy; 2025 The Smoke Record Store || Budget Button. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+
+  </body>
+</html>
