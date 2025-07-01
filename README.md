@@ -1,5 +1,7 @@
 # The Smoke Record Store – The Budget Button Story...
 
+🌐 **Live site:** [thesmokerecordstore.netlify.app](https://thesmokerecordstore.netlify.app)
+
 The Smoke Record Store is not just a record store.
 
 It’s a fully functional music shop designed to present one idea: the **Budget Button**.  
@@ -705,7 +707,7 @@ A combination of personalized scoring, rotation strategies, and deep filtering f
 
 ---
 
-### 🔍 SMART PICKS
+### SMART PICKS
 
 Smart Picks are used in Scenarios 1–4 **only if the user has albums in their Watched list**, but hasn’t explicitly selected a "Watched" scenario.
 
@@ -771,3 +773,35 @@ Smart Picks are used in Scenarios 1–4 **only if the user has albums in their W
 **Smart Pick (Pick 5):**  
 `METHOD: PRF (Dominant Format Filter → Whole store → Chosen genre → Scoring by bbScore)`  
 → If dominant format is tied, format is chosen randomly.
+
+---
+
+## Project Summary & Next Steps
+
+### 🔧 What’s Done So Far
+
+- **Idea:** Concept of a digital vinyl & CD record store with built-in budget assistant.
+- **Branding:** Custom-designed logo with minimalist black & white aesthetic.
+- **Technologies Used:**  
+  HTML • CSS • JavaScript (Vanilla) • JSON (for data)
+
+- **Key Features Implemented:**
+  - Sticky navigation with fullscreen intro section
+  - Dropdown filters for Genres and Formats
+  - Budget Button system with 12 dynamic scenarios + Smart Picks logic
+  - Pagination and dynamic rendering of album cards
+  - Basic Watch list and Cart functionality
+  - Full project documentation (README) with explanation of logic & methodology
+
+---
+
+### What’s Next
+
+- Full responsive design pass (mobile-first revisions)
+- Local storage integration for Watch and Cart features
+- Micro-interactions and animation polishing
+- Enhanced BB results visuals (badges, scores, alerts)
+- Admin panel for adding/editing albums (future-proofing)
+- Deployment to GitHub Pages or Netlify
+
+---
