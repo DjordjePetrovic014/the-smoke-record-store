@@ -2502,7 +2502,6 @@ const bbScrollBtn = document.querySelector("#bbIntroPanel .scroll-to-shop");
 if (bbIntroBtn) {
   bbIntroBtn.addEventListener("click", (e) => {
     e.preventDefault();
-    console.log("🧨 bbIntroBtn CLICK DETECTED");
 
     bbIntroFadeLayer.classList.remove("hidden");
     setTimeout(() => bbIntroFadeLayer.classList.add("visible"), 10);
@@ -2569,13 +2568,10 @@ document.addEventListener("DOMContentLoaded", () => {
   // Klik na toggle dugme → otvori ili zatvori dropdown
   formatsToggle.addEventListener("click", (e) => {
     e.preventDefault();
-    console.log("Klik na formatsToggle");
 
     if (formatsDropdown.classList.contains("keep-open")) {
-      console.log("Zatvaram dropdown");
       formatsDropdown.classList.remove("keep-open");
     } else {
-      console.log("Otvaram dropdown");
       formatsDropdown.classList.add("keep-open");
     }
   });
@@ -2776,7 +2772,6 @@ const bbBudgetFadeLayer = document.getElementById("bbBudgetFadeLayer");
 if (bbStickyBtn && bbBudgetPanel && bbBudgetFadeLayer) {
   bbStickyBtn.addEventListener("click", (e) => {
     e.preventDefault();
-    console.log("✅ Kliknuto na BB STICKY dugme");
 
     bbBudgetFadeLayer.classList.remove("hidden");
     setTimeout(() => bbBudgetFadeLayer.classList.add("visible"), 10);
@@ -2814,7 +2809,6 @@ const bbResultsFadeLayer = document.getElementById("bbResultsFadeLayer");
 const confirmBudgetBtn = document.getElementById("confirmBudgetBtn");
 const budgetInput = document.getElementById("budgetInput");
 
-console.log("✅ confirmBudgetBtn:", confirmBudgetBtn);
 if (budgetInput) {
   budgetInput.addEventListener("keydown", (e) => {
     if (e.key === "Enter") {
@@ -2826,7 +2820,6 @@ if (budgetInput) {
 if (confirmBudgetBtn) {
   confirmBudgetBtn.addEventListener("click", (e) => {
     e.preventDefault();
-    console.log("🎯 Smoke It! kliknuto");
 
     // 🔢 Čitanje unetog budžeta i izabranih opcija (Scope / Format / Genre)
     const budget = parseFloat(document.getElementById("budgetInput").value);
@@ -2918,13 +2911,6 @@ if (confirmBudgetBtn) {
     } else {
       console.warn("❌ Nedefinisana kombinacija za scenario.");
     }
-
-    console.log("🧭 currentScenario:", currentScenario);
-    console.log("➡️ Budžet:", budget);
-    console.log("➡️ Scope:", selectedScope);
-    console.log("➡️ Format:", selectedFormat);
-    console.log("➡️ Genre:", selectedGenre);
-    console.log("🎒 Watched albums:", watchedAlbums);
 
     // 📦 Odabir početnog skupa albuma
     const pool = getFilteredPool(
@@ -3124,9 +3110,6 @@ if (confirmBudgetBtn) {
           MAX_OCCURRENCES_PER_TITLE,
           selectedGenre
         );
-        console.log("✅ Naslovi u scenarioUsedTitles nakon Pick1:", [
-          ...scenarioUsedTitles.entries(),
-        ]);
 
         const pick2 = bbScenario4Pick2(
           shuffledOnce,
@@ -3185,9 +3168,6 @@ if (confirmBudgetBtn) {
           MAX_OCCURRENCES_PER_TITLE,
           selectedGenre
         );
-        console.log("✅ Naslovi u scenarioUsedTitles nakon Pick1:", [
-          ...scenarioUsedTitles.entries(),
-        ]);
 
         const pick2 = bbScenario5Pick2(
           shuffledOnce, /// P1P2-Split-Filter logika ///
@@ -3235,9 +3215,6 @@ if (confirmBudgetBtn) {
           MAX_OCCURRENCES_PER_TITLE,
           selectedGenre
         );
-        console.log("✅ Naslovi u scenarioUsedTitles nakon Pick1:", [
-          ...scenarioUsedTitles.entries(),
-        ]);
 
         const pick2 = bbScenario6Pick2(
           shuffledOnce, /// P1P2-Split-Filter logika ///
@@ -3327,9 +3304,6 @@ if (confirmBudgetBtn) {
           MAX_OCCURRENCES_PER_TITLE,
           selectedGenre
         );
-        console.log("✅ Naslovi u scenarioUsedTitles nakon Pick1:", [
-          ...scenarioUsedTitles.entries(),
-        ]);
 
         const pick2 = bbScenario8Pick2(
           shuffledOnce, /// P1P2-Split-Filter logika ///
@@ -3376,9 +3350,6 @@ if (confirmBudgetBtn) {
           MAX_OCCURRENCES_PER_TITLE,
           selectedGenre
         );
-        console.log("✅ Naslovi u scenarioUsedTitles nakon Pick1:", [
-          ...scenarioUsedTitles.entries(),
-        ]);
 
         const pick2 = bbScenario9Pick2(
           shuffledOnce, /// P1P2-Split-Filter logika ///
@@ -3425,9 +3396,6 @@ if (confirmBudgetBtn) {
           MAX_OCCURRENCES_PER_TITLE,
           selectedGenre
         );
-        console.log("✅ Naslovi u scenarioUsedTitles nakon Pick1:", [
-          ...scenarioUsedTitles.entries(),
-        ]);
 
         const pick2 = bbScenario10Pick2(
           shuffledOnce, /// P1P2-Split-Filter logika ///
@@ -3476,9 +3444,6 @@ if (confirmBudgetBtn) {
           MAX_OCCURRENCES_PER_TITLE,
           selectedGenre
         );
-        console.log("✅ Naslovi u scenarioUsedTitles nakon Pick1:", [
-          ...scenarioUsedTitles.entries(),
-        ]);
 
         const pick2 = bbScenario11Pick2(
           shuffledOnce, // ← druga polovina radnje (P1P2-Split-Filter)
@@ -3530,9 +3495,6 @@ if (confirmBudgetBtn) {
           MAX_OCCURRENCES_PER_TITLE,
           selectedGenre
         );
-        console.log("✅ Naslovi u scenarioUsedTitles nakon Pick1:", [
-          ...scenarioUsedTitles.entries(),
-        ]);
 
         const pick2 = bbScenario12Pick2(
           shuffledOnce, // ← druga polovina radnje (P1P2-Split-Filter)
@@ -3769,13 +3731,6 @@ function processBBResults() {
   const scope = document.querySelector('input[name="scope"]:checked').value;
   const format = document.querySelector('input[name="format"]:checked').value;
   const genre = document.querySelector('input[name="genre"]:checked').value;
-
-  console.log("🎯 Smoke It! clicked");
-  console.log("➡️ Budget:", budget);
-  console.log("➡️ Scope:", scope);
-  console.log("➡️ Format:", format);
-  console.log("➡️ Genre:", genre);
-  console.log("👁️ Watched:", watchedAlbums);
 
   const sourceAlbums =
     scope === "watched"
@@ -5368,10 +5323,6 @@ function bbScenario1Pick1(
   scenarioUsedTitles,
   MAX_OCCURRENCES_PER_TITLE
 ) {
-  console.log(
-    "🧪 bbScenario1Pick1 aktiviran (Vinyl-CD naizmenično, po ratingu, bez duplikata)"
-  );
-
   // Priprema odvojenih i sortiranih lista po formatu
   const vinylsByRating = albums
     .filter(
@@ -5433,11 +5384,6 @@ function bbScenario1Pick1(
     }
   }
 
-  console.log(
-    "🎯 Rezultati za bbScenario1Pick1:",
-    selected.map((a) => `${a.title} (${a.format}) – rating: ${a.rating}`)
-  );
-
   return selected;
 }
 
@@ -5451,10 +5397,6 @@ function bbScenario1Pick2(
   scenarioUsedTitles,
   MAX_OCCURRENCES_PER_TITLE
 ) {
-  console.log(
-    "🧪 bbScenario1Pick2 aktiviran (Vinyl/CD naizmenično, po najmanjem stocku, bez duplikata)"
-  );
-
   // Priprema vinila i diskova sortiranih po najmanjem stocku
   const vinylsByStock = albums
     .filter((a) => a.format.toLowerCase() === "vinyl" && a.stock > 0)
@@ -5512,11 +5454,6 @@ function bbScenario1Pick2(
     }
   }
 
-  console.log(
-    "🎯 Rezultati za bbScenario1Pick2:",
-    selected.map((a) => `${a.title} (${a.format}) – stock: ${a.stock}`)
-  );
-
   return selected;
 }
 
@@ -5529,8 +5466,6 @@ function bbScenario1Pick3(
   scenarioUsedTitles,
   MAX_OCCURRENCES_PER_TITLE
 ) {
-  console.log("🧪 bbScenario1Pick3 aktiviran (SCORING – prva polovina radnje)");
-
   // Uzimamo samo prvu polovinu albuma
   const halfway = Math.ceil(albums.length / 2);
   const firstHalf = albums.slice(0, halfway);
@@ -5563,11 +5498,6 @@ function bbScenario1Pick3(
     }
   }
 
-  console.log(
-    "🎯 Rezultati za bbScenario1Pick3:",
-    selected.map((a) => `${a.title} – score: ${a.bbScore.toFixed(2)}`)
-  );
-
   return selected;
 }
 // SCENARIO 1 / PREDLOG 4
@@ -5579,10 +5509,6 @@ function bbScenario1Pick4(
   scenarioUsedTitles,
   MAX_OCCURRENCES_PER_TITLE
 ) {
-  console.log(
-    "🧪 bbScenario1Pick4 aktiviran (SCORING – druga polovina radnje)"
-  );
-
   // Uzimamo samo drugu polovinu albuma
   const halfway = Math.ceil(albums.length / 2);
   const secondHalf = albums.slice(halfway);
@@ -5615,11 +5541,6 @@ function bbScenario1Pick4(
     }
   }
 
-  console.log(
-    "🎯 Rezultati za bbScenario1Pick4:",
-    selected.map((a) => `${a.title} – score: ${a.bbScore.toFixed(2)}`)
-  );
-
   return selected;
 }
 
@@ -5635,10 +5556,6 @@ function bbScenario1SmartPick5(
   MAX_OCCURRENCES_PER_TITLE,
   watchedAlbums
 ) {
-  console.log(
-    "🧠 bbScenario1SmartPick5 aktiviran (Dominant Genre → Whole store → BB score)"
-  );
-
   // ✅ Provera watched liste
   if (!Array.isArray(watchedAlbums) || watchedAlbums.length === 0) {
     console.warn("🚫 Nema watched albuma za analizu žanra.");
@@ -5674,8 +5591,6 @@ function bbScenario1SmartPick5(
     topGenres.length === 1
       ? topGenres[0]
       : topGenres[Math.floor(Math.random() * topGenres.length)];
-
-  console.log("🎶 Dominantni žanr (iz watched):", dominantGenre);
 
   // 🎯 Filter: ceo store + svi formati + dominantni žanr
   const filtered = albums
@@ -5716,11 +5631,6 @@ function bbScenario1SmartPick5(
     }
   }
 
-  console.log(
-    "✅ Rezultati za bbScenario1SmartPick5:",
-    selected.map((a) => `${a.title} – score: ${a.bbScore.toFixed(2)}`)
-  );
-
   return selected;
 }
 
@@ -5733,10 +5643,6 @@ function bbScenario1Pick5(
   scenarioUsedTitles,
   MAX_OCCURRENCES_PER_TITLE
 ) {
-  console.log(
-    "🧪 bbScenario1Pick5 aktiviran (PRF – sort: high rating → low price → low stock)"
-  );
-
   // 🎯 Filtriraj sve koji imaju rejting i staju u budžet
   const sorted = albums
     .filter((a) => typeof a.rating === "number" && a.price <= budget)
@@ -5770,13 +5676,6 @@ function bbScenario1Pick5(
     }
   }
 
-  console.log(
-    "🎯 Rezultati za bbScenario1Pick5:",
-    selected.map(
-      (a) => `${a.title} – $${a.price}, rating: ${a.rating}, stock: ${a.stock}`
-    )
-  );
-
   return selected;
 }
 
@@ -5788,8 +5687,6 @@ function bbScenario2Pick1(
   scenarioUsedTitles,
   MAX_OCCURRENCES_PER_TITLE
 ) {
-  console.log("🧪 bbScenario2Pick1 aktiviran (SCORING – prva polovina radnje)");
-
   const vinyls = albums.filter((a) => a.format.toLowerCase() === "vinyl");
   const halfway = Math.ceil(vinyls.length / 2);
   const firstHalf = vinyls.slice(0, halfway);
@@ -5821,11 +5718,6 @@ function bbScenario2Pick1(
     }
   }
 
-  console.log(
-    "🎯 Rezultati za bbScenario2Pick1:",
-    selected.map((a) => `${a.title} – score: ${a.bbScore.toFixed(2)}`)
-  );
-
   return selected;
 }
 
@@ -5837,10 +5729,6 @@ function bbScenario2Pick2(
   scenarioUsedTitles,
   MAX_OCCURRENCES_PER_TITLE
 ) {
-  console.log(
-    "🧪 bbScenario2Pick2 aktiviran (SCORING – druga polovina radnje)"
-  );
-
   const vinyls = albums.filter((a) => a.format.toLowerCase() === "vinyl");
   const halfway = Math.ceil(vinyls.length / 2);
   const secondHalf = vinyls.slice(halfway);
@@ -5872,11 +5760,6 @@ function bbScenario2Pick2(
     }
   }
 
-  console.log(
-    "🎯 Rezultati za bbScenario2Pick2:",
-    selected.map((a) => `${a.title} – score: ${a.bbScore.toFixed(2)}`)
-  );
-
   return selected;
 }
 
@@ -5889,10 +5772,6 @@ function bbScenario2Pick3(
   scenarioUsedTitles,
   MAX_OCCURRENCES_PER_TITLE
 ) {
-  console.log(
-    "🧪 bbScenario2Pick3 aktiviran (PRF scoring cycle – bbScore rotacija kroz tercile)"
-  );
-
   const vinyls = albums.filter((a) => a.format.toLowerCase() === "vinyl");
   const tercileSize = Math.ceil(vinyls.length / 3);
 
@@ -5940,11 +5819,6 @@ function bbScenario2Pick3(
     cycle++;
   }
 
-  console.log(
-    "🎯 Rezultati za bbScenario2Pick3:",
-    selected.map((a) => `${a.title} – score: ${a.bbScore.toFixed(2)}`)
-  );
-
   return selected;
 }
 
@@ -5957,10 +5831,6 @@ function bbScenario2Pick4(
   scenarioUsedTitles,
   MAX_OCCURRENCES_PER_TITLE
 ) {
-  console.log(
-    "🧪 bbScenario2Pick4 aktiviran (PRF scoring cycle – price rotacija kroz tercile)"
-  );
-
   const vinyls = albums.filter((a) => a.format.toLowerCase() === "vinyl");
   const tercileSize = Math.ceil(vinyls.length / 3);
 
@@ -6003,11 +5873,6 @@ function bbScenario2Pick4(
     cycle++;
   }
 
-  console.log(
-    "🎯 Rezultati za bbScenario2Pick4:",
-    selected.map((a) => `${a.title} – $${a.price}`)
-  );
-
   return selected;
 }
 
@@ -6023,10 +5888,6 @@ function bbScenario2SmartPick5(
   MAX_OCCURRENCES_PER_TITLE,
   watchedAlbums
 ) {
-  console.log(
-    "🧠 bbScenario2SmartPick5 aktiviran (Dominant Genre → Whole store → Vinyls → BB score)"
-  );
-
   if (!Array.isArray(watchedAlbums) || watchedAlbums.length === 0) {
     console.warn("🚫 Nema watched albuma za analizu žanra.");
     return [];
@@ -6058,8 +5919,6 @@ function bbScenario2SmartPick5(
     topGenres.length === 1
       ? topGenres[0]
       : topGenres[Math.floor(Math.random() * topGenres.length)];
-
-  console.log("🎶 Dominantni žanr (iz watched):", dominantGenre);
 
   // 🎯 Filter: ceo store → samo vinyl + dominantni žanr
   const filtered = albums
@@ -6095,11 +5954,6 @@ function bbScenario2SmartPick5(
     }
   }
 
-  console.log(
-    "✅ Rezultati za bbScenario2SmartPick5:",
-    selected.map((a) => `${a.title} – score: ${a.bbScore.toFixed(2)}`)
-  );
-
   return selected;
 }
 
@@ -6112,10 +5966,6 @@ function bbScenario2Pick5(
   scenarioUsedTitles,
   MAX_OCCURRENCES_PER_TITLE
 ) {
-  console.log(
-    "🧪 bbScenario2Pick5 aktiviran (PRF – sort: stock → price → rating)"
-  );
-
   const filtered = albums
     .filter(
       (a) =>
@@ -6149,13 +5999,6 @@ function bbScenario2Pick5(
     }
   }
 
-  console.log(
-    "🎯 Rezultati za bbScenario2Pick5:",
-    selected.map(
-      (a) => `${a.title} – stock: ${a.stock}, $${a.price}, rating: ${a.rating}`
-    )
-  );
-
   return selected;
 }
 // SCENARIO 3 / PICK 1
@@ -6167,8 +6010,6 @@ function bbScenario3Pick1(
   scenarioUsedTitles,
   MAX_OCCURRENCES_PER_TITLE
 ) {
-  console.log("🧪 bbScenario3Pick1 aktiviran (SCORING – prva polovina radnje)");
-
   const cds = albums.filter((a) => a.format.toLowerCase() === "cd");
   const halfway = Math.ceil(cds.length / 2);
   const firstHalf = cds.slice(0, halfway);
@@ -6200,11 +6041,6 @@ function bbScenario3Pick1(
     }
   }
 
-  console.log(
-    "🌟 Rezultati za bbScenario3Pick1:",
-    selected.map((a) => `${a.title} – score: ${a.bbScore.toFixed(2)}`)
-  );
-
   return selected;
 }
 
@@ -6217,10 +6053,6 @@ function bbScenario3Pick2(
   scenarioUsedTitles,
   MAX_OCCURRENCES_PER_TITLE
 ) {
-  console.log(
-    "🧪 bbScenario3Pick2 aktiviran (SCORING – druga polovina radnje)"
-  );
-
   const cds = albums.filter((a) => a.format.toLowerCase() === "cd");
   const halfway = Math.ceil(cds.length / 2);
   const secondHalf = cds.slice(halfway);
@@ -6252,11 +6084,6 @@ function bbScenario3Pick2(
     }
   }
 
-  console.log(
-    "🌟 Rezultati za bbScenario3Pick2:",
-    selected.map((a) => `${a.title} – score: ${a.bbScore.toFixed(2)}`)
-  );
-
   return selected;
 }
 
@@ -6269,10 +6096,6 @@ function bbScenario3Pick3(
   scenarioUsedTitles,
   MAX_OCCURRENCES_PER_TITLE
 ) {
-  console.log(
-    "🧪 bbScenario3Pick3 aktiviran (PRF scoring cycle – bbScore rotacija kroz tercile)"
-  );
-
   const cds = albums.filter((a) => a.format.toLowerCase() === "cd");
   const tercileSize = Math.ceil(cds.length / 3);
 
@@ -6320,11 +6143,6 @@ function bbScenario3Pick3(
     cycle++;
   }
 
-  console.log(
-    "🎯 Rezultati za bbScenario3Pick3:",
-    selected.map((a) => `${a.title} – score: ${a.bbScore.toFixed(2)}`)
-  );
-
   return selected;
 }
 
@@ -6337,10 +6155,6 @@ function bbScenario3Pick4(
   scenarioUsedTitles,
   MAX_OCCURRENCES_PER_TITLE
 ) {
-  console.log(
-    "🧪 bbScenario3Pick4 aktiviran (PRF scoring cycle – price rotacija kroz tercile)"
-  );
-
   const cds = albums.filter((a) => a.format.toLowerCase() === "cd");
   const tercileSize = Math.ceil(cds.length / 3);
 
@@ -6383,11 +6197,6 @@ function bbScenario3Pick4(
     cycle++;
   }
 
-  console.log(
-    "🎯 Rezultati za bbScenario3Pick4:",
-    selected.map((a) => `${a.title} – $${a.price}`)
-  );
-
   return selected;
 }
 
@@ -6402,10 +6211,6 @@ function bbScenario3SmartPick5(
   MAX_OCCURRENCES_PER_TITLE,
   watchedAlbums
 ) {
-  console.log(
-    "🧠 bbScenario3SmartPick5 aktiviran (Dominant Genre → Whole store → CDs → BB score)"
-  );
-
   if (!Array.isArray(watchedAlbums) || watchedAlbums.length === 0) {
     console.warn("🚫 Nema watched albuma za analizu žanra.");
     return [];
@@ -6438,8 +6243,6 @@ function bbScenario3SmartPick5(
     topGenres.length === 1
       ? topGenres[0]
       : topGenres[Math.floor(Math.random() * topGenres.length)];
-
-  console.log("🎶 Dominantni žanr (iz watched):", dominantGenre);
 
   // 🎯 Filter: ceo store → samo CD + dominantni žanr
   const filtered = albums
@@ -6475,11 +6278,6 @@ function bbScenario3SmartPick5(
     }
   }
 
-  console.log(
-    "✅ Rezultati za bbScenario3SmartPick5:",
-    selected.map((a) => `${a.title} – score: ${a.bbScore.toFixed(2)}`)
-  );
-
   return selected;
 }
 
@@ -6492,10 +6290,6 @@ function bbScenario3Pick5(
   scenarioUsedTitles,
   MAX_OCCURRENCES_PER_TITLE
 ) {
-  console.log(
-    "🧪 bbScenario3Pick5 aktiviran (PRF – sort: stock → price → rating)"
-  );
-
   const filtered = albums
     .filter(
       (a) => a.format.toLowerCase() === "cd" && a.stock > 0 && a.price <= budget
@@ -6525,12 +6319,6 @@ function bbScenario3Pick5(
     }
   }
 
-  console.log(
-    "🎯 Rezultati za bbScenario3Pick5:",
-    selected.map(
-      (a) => `${a.title} – stock: ${a.stock}, $${a.price}, rating: ${a.rating}`
-    )
-  );
   return selected;
 }
 // SCENARIO 4 / PICK 1 /
@@ -6543,11 +6331,6 @@ function bbScenario4Pick1(
   MAX_OCCURRENCES_PER_TITLE,
   selectedGenre
 ) {
-  console.log(
-    "🧪 bbScenario4Pick1 aktiviran (SCORING – prva polovina radnje, žanr)"
-  );
-  console.log("🎯 Ukupan broj albuma:", albums.length);
-
   const halfway = Math.ceil(albums.length / 2);
   const firstHalf = albums.slice(0, halfway);
 
@@ -6583,10 +6366,6 @@ function bbScenario4Pick1(
     }
   }
 
-  console.log(
-    "🌟 Rezultati za bbScenario4Pick1:",
-    selected.map((a) => `${a.title} – score: ${a.bbScore.toFixed(2)}`)
-  );
   return selected;
 }
 
@@ -6600,11 +6379,6 @@ function bbScenario4Pick2(
   MAX_OCCURRENCES_PER_TITLE,
   selectedGenre
 ) {
-  console.log(
-    "🧪 bbScenario4Pick2 aktiviran (SCORING – druga polovina radnje, žanr)"
-  );
-  console.log("🎯 Ukupan broj albuma:", albums.length);
-
   const halfway = Math.ceil(albums.length / 2);
   const secondHalf = albums.slice(halfway);
 
@@ -6651,10 +6425,6 @@ function bbScenario4Pick2(
     }
   }
 
-  console.log(
-    "🌟 Rezultati za bbScenario4Pick2:",
-    selected.map((a) => `${a.title} – score: ${a.bbScore.toFixed(2)}`)
-  );
   return selected;
 }
 
@@ -6668,10 +6438,6 @@ function bbScenario4Pick3(
   MAX_OCCURRENCES_PER_TITLE,
   selectedGenre
 ) {
-  console.log(
-    "🧪 bbScenario4Pick3 aktiviran (PRF rotacija – bbScore kroz tercile žanra)"
-  );
-
   const genreAlbums = albums.filter(
     (a) =>
       typeof a.genre === "string" &&
@@ -6729,11 +6495,6 @@ function bbScenario4Pick3(
     cycle++;
   }
 
-  console.log(
-    "🎯 Rezultati za bbScenario4Pick3:",
-    selected.map((a) => `${a.title} – score: ${a.bbScore.toFixed(2)}`)
-  );
-
   return selected;
 }
 
@@ -6747,10 +6508,6 @@ function bbScenario4Pick4(
   MAX_OCCURRENCES_PER_TITLE,
   selectedGenre
 ) {
-  console.log(
-    "🧪 bbScenario4Pick4 aktiviran (PRF rotacija – cena kroz tercile žanra)"
-  );
-
   const genreAlbums = albums.filter(
     (a) =>
       typeof a.genre === "string" &&
@@ -6797,11 +6554,6 @@ function bbScenario4Pick4(
     cycle++;
   }
 
-  console.log(
-    "🎯 Rezultati za bbScenario4Pick4:",
-    selected.map((a) => `${a.title} – $${a.price}`)
-  );
-
   return selected;
 }
 // SCENARIO 4 / SMART PICK 5
@@ -6816,10 +6568,6 @@ function bbScenario4SmartPick5(
   watchedAlbums,
   selectedGenre
 ) {
-  console.log(
-    "🧠 bbScenario4SmartPick5 aktiviran (Dominant Format → Whole store → Genre → BB score)"
-  );
-
   if (!Array.isArray(watchedAlbums) || watchedAlbums.length === 0) {
     console.warn("🚫 Nema watched albuma za analizu formata.");
     return [];
@@ -6847,8 +6595,6 @@ function bbScenario4SmartPick5(
     topFormats.length === 1
       ? topFormats[0]
       : topFormats[Math.floor(Math.random() * topFormats.length)];
-
-  console.log("🎧 Dominantni format (iz watched):", dominantFormat);
 
   // 🎯 Filter: ceo store → samo dominantni format + izabrani žanr
   const filtered = albums
@@ -6890,11 +6636,6 @@ function bbScenario4SmartPick5(
     }
   }
 
-  console.log(
-    "✅ Rezultati za bbScenario4SmartPick5:",
-    selected.map((a) => `${a.title} – score: ${a.bbScore.toFixed(2)}`)
-  );
-
   return selected;
 }
 
@@ -6908,10 +6649,6 @@ function bbScenario4Pick5(
   MAX_OCCURRENCES_PER_TITLE,
   selectedGenre
 ) {
-  console.log(
-    "🧪 bbScenario4Pick5 aktiviran (PRF – sort: stock → price → rating, žanr)"
-  );
-
   const filtered = albums
     .filter(
       (a) =>
@@ -6945,13 +6682,6 @@ function bbScenario4Pick5(
     }
   }
 
-  console.log(
-    "🎯 Rezultati za bbScenario4Pick5:",
-    selected.map(
-      (a) => `${a.title} – stock: ${a.stock}, $${a.price}, rating: ${a.rating}`
-    )
-  );
-
   return selected;
 }
 // SCENARIO 5 / PICK 1 /
@@ -6964,11 +6694,6 @@ function bbScenario5Pick1(
   MAX_OCCURRENCES_PER_TITLE,
   selectedGenre
 ) {
-  console.log(
-    "🧚 bbScenario5Pick1 aktiviran (SCORING – prva polovina radnje, vinyl, žanr)"
-  );
-  console.log("🌟 Ukupan broj albuma:", albums.length);
-
   const halfway = Math.ceil(albums.length / 2);
   const firstHalf = albums.slice(0, halfway);
 
@@ -7012,11 +6737,6 @@ function bbScenario5Pick1(
     }
   }
 
-  console.log(
-    "✨ Rezultati za bbScenario5Pick1:",
-    selected.map((a) => `${a.title} – score: ${a.bbScore.toFixed(2)}`)
-  );
-
   return selected;
 }
 // SCENARIO 5 / PICK 2 /
@@ -7029,11 +6749,6 @@ function bbScenario5Pick2(
   MAX_OCCURRENCES_PER_TITLE,
   selectedGenre
 ) {
-  console.log(
-    "🧚 bbScenario5Pick2 aktiviran (SCORING – druga polovina radnje, vinyl, žanr)"
-  );
-  console.log("🌟 Ukupan broj albuma:", albums.length);
-
   const halfway = Math.ceil(albums.length / 2);
   const secondHalf = albums.slice(halfway);
 
@@ -7083,11 +6798,6 @@ function bbScenario5Pick2(
     }
   }
 
-  console.log(
-    "✨ Rezultati za bbScenario5Pick2:",
-    selected.map((a) => `${a.title} – score: ${a.bbScore.toFixed(2)}`)
-  );
-
   return selected;
 }
 // SCENARIO 5 / PICK 3 /
@@ -7100,10 +6810,6 @@ function bbScenario5Pick3(
   MAX_OCCURRENCES_PER_TITLE,
   selectedGenre
 ) {
-  console.log(
-    "🧚 bbScenario5Pick3 aktiviran (PRF rotacija – stock kroz tercile žanra)"
-  );
-
   const genreVinylAlbums = albums.filter(
     (a) =>
       a.format.toLowerCase() === "vinyl" &&
@@ -7151,11 +6857,6 @@ function bbScenario5Pick3(
     cycle++;
   }
 
-  console.log(
-    "✨ Rezultati za bbScenario5Pick3:",
-    selected.map((a) => `${a.title} – stock: ${a.stock}`)
-  );
-
   return selected;
 }
 // SCENARIO 5 / PICK 4 /
@@ -7168,10 +6869,6 @@ function bbScenario5Pick4(
   MAX_OCCURRENCES_PER_TITLE,
   selectedGenre
 ) {
-  console.log(
-    "🧚 bbScenario5Pick4 aktiviran (PRF rotacija – bbScore kroz tercile žanra)"
-  );
-
   const genreVinylAlbums = albums.filter(
     (a) =>
       a.format.toLowerCase() === "vinyl" &&
@@ -7230,11 +6927,6 @@ function bbScenario5Pick4(
     cycle++;
   }
 
-  console.log(
-    "✨ Rezultati za bbScenario5Pick4:",
-    selected.map((a) => `${a.title} – score: ${a.bbScore.toFixed(2)}`)
-  );
-
   return selected;
 }
 // SCENARIO 5 / PICK 5 /
@@ -7247,10 +6939,6 @@ function bbScenario5Pick5(
   MAX_OCCURRENCES_PER_TITLE,
   selectedGenre
 ) {
-  console.log(
-    "🧚 bbScenario5Pick5 aktiviran (PRF rotacija – cena kroz tercile žanra)"
-  );
-
   const genreVinylAlbums = albums.filter(
     (a) =>
       a.format.toLowerCase() === "vinyl" &&
@@ -7298,11 +6986,6 @@ function bbScenario5Pick5(
     cycle++;
   }
 
-  console.log(
-    "✨ Rezultati za bbScenario5Pick5:",
-    selected.map((a) => `${a.title} – $${a.price}`)
-  );
-
   return selected;
 }
 // SCENARIO 6 / PICK 1
@@ -7315,11 +6998,6 @@ function bbScenario6Pick1(
   MAX_OCCURRENCES_PER_TITLE,
   selectedGenre
 ) {
-  console.log(
-    "🧚 bbScenario6Pick1 aktiviran (SCORING – prva polovina radnje, CD, žanr)"
-  );
-  console.log("🌟 Ukupan broj albuma:", albums.length);
-
   const halfway = Math.ceil(albums.length / 2);
   const firstHalf = albums.slice(0, halfway);
 
@@ -7362,11 +7040,6 @@ function bbScenario6Pick1(
     }
   }
 
-  console.log(
-    "✨ Rezultati za bbScenario6Pick1:",
-    selected.map((a) => `${a.title} – score: ${a.bbScore.toFixed(2)}`)
-  );
-
   return selected;
 }
 
@@ -7380,11 +7053,6 @@ function bbScenario6Pick2(
   MAX_OCCURRENCES_PER_TITLE,
   selectedGenre
 ) {
-  console.log(
-    "🧚 bbScenario6Pick2 aktiviran (SCORING – druga polovina radnje, CD, žanr)"
-  );
-  console.log("🌟 Ukupan broj albuma:", albums.length);
-
   const halfway = Math.ceil(albums.length / 2);
   const secondHalf = albums.slice(halfway);
 
@@ -7433,11 +7101,6 @@ function bbScenario6Pick2(
     }
   }
 
-  console.log(
-    "✨ Rezultati za bbScenario6Pick2:",
-    selected.map((a) => `${a.title} – score: ${a.bbScore.toFixed(2)}`)
-  );
-
   return selected;
 }
 
@@ -7451,10 +7114,6 @@ function bbScenario6Pick3(
   MAX_OCCURRENCES_PER_TITLE,
   selectedGenre
 ) {
-  console.log(
-    "🧚 bbScenario6Pick3 aktiviran (PRF rotacija – stock kroz tercile žanra)"
-  );
-
   const genreCDAlbums = albums.filter(
     (a) =>
       a.format.toLowerCase() === "cd" &&
@@ -7502,11 +7161,6 @@ function bbScenario6Pick3(
     cycle++;
   }
 
-  console.log(
-    "✨ Rezultati za bbScenario6Pick3:",
-    selected.map((a) => `${a.title} – stock: ${a.stock}`)
-  );
-
   return selected;
 }
 
@@ -7520,10 +7174,6 @@ function bbScenario6Pick4(
   MAX_OCCURRENCES_PER_TITLE,
   selectedGenre
 ) {
-  console.log(
-    "🧚 bbScenario6Pick4 aktiviran (PRF rotacija – bbScore kroz tercile žanra)"
-  );
-
   const genreCDAlbums = albums.filter(
     (a) =>
       a.format.toLowerCase() === "cd" &&
@@ -7582,11 +7232,6 @@ function bbScenario6Pick4(
     cycle++;
   }
 
-  console.log(
-    "✨ Rezultati za bbScenario6Pick4:",
-    selected.map((a) => `${a.title} – score: ${a.bbScore.toFixed(2)}`)
-  );
-
   return selected;
 }
 
@@ -7600,10 +7245,6 @@ function bbScenario6Pick5(
   MAX_OCCURRENCES_PER_TITLE,
   selectedGenre
 ) {
-  console.log(
-    "🧚 bbScenario6Pick5 aktiviran (PRF rotacija – cena kroz tercile žanra)"
-  );
-
   const genreCDAlbums = albums.filter(
     (a) =>
       a.format.toLowerCase() === "cd" &&
@@ -7651,11 +7292,6 @@ function bbScenario6Pick5(
     cycle++;
   }
 
-  console.log(
-    "✨ Rezultati za bbScenario6Pick5:",
-    selected.map((a) => `${a.title} – $${a.price}`)
-  );
-
   return selected;
 }
 
@@ -7668,10 +7304,6 @@ function bbScenario7Pick1(
   scenarioUsedTitles,
   MAX_OCCURRENCES_PER_TITLE
 ) {
-  console.log(
-    "🧠 bbScenario7Pick1 aktiviran (PRF rotacija – bbScore kroz tercile watched)"
-  );
-
   const tercileSize = Math.ceil(albums.length / 3);
 
   const first = albums.slice(0, tercileSize);
@@ -7723,11 +7355,6 @@ function bbScenario7Pick1(
     cycle++;
   }
 
-  console.log(
-    "📦 Rezultati za bbScenario7Pick1:",
-    selected.map((a) => `${a.title} – score: ${a.bbScore.toFixed(2)}`)
-  );
-
   return selected;
 }
 
@@ -7740,10 +7367,6 @@ function bbScenario7Pick2(
   scenarioUsedTitles,
   MAX_OCCURRENCES_PER_TITLE
 ) {
-  console.log(
-    "📦 bbScenario7Pick2 aktiviran (PRF rotacija – stock kroz tercile watched)"
-  );
-
   const sortedByStock = [...albums].sort((a, b) => a.stock - b.stock);
   const tercileSize = Math.ceil(sortedByStock.length / 3);
 
@@ -7784,11 +7407,6 @@ function bbScenario7Pick2(
     cycle++;
   }
 
-  console.log(
-    "📦 Rezultati za bbScenario7Pick2:",
-    selected.map((a) => `${a.title} – stock: ${a.stock}`)
-  );
-
   return selected;
 }
 
@@ -7801,10 +7419,6 @@ function bbScenario7Pick3(
   scenarioUsedTitles,
   MAX_OCCURRENCES_PER_TITLE
 ) {
-  console.log(
-    "📦 bbScenario7Pick3 aktiviran (PRF rotacija – cena kroz tercile watched)"
-  );
-
   const sortedByPrice = [...albums].sort((a, b) => a.price - b.price);
   const tercileSize = Math.ceil(sortedByPrice.length / 3);
 
@@ -7845,11 +7459,6 @@ function bbScenario7Pick3(
     cycle++;
   }
 
-  console.log(
-    "📦 Rezultati za bbScenario7Pick3:",
-    selected.map((a) => `${a.title} – $${a.price}`)
-  );
-
   return selected;
 }
 // SCENARIO 7 / PICK 4
@@ -7863,10 +7472,6 @@ function bbScenario7Pick4(
   MAX_OCCURRENCES_PER_TITLE,
   watchedAlbums
 ) {
-  console.log(
-    "🎯 bbScenario7Pick4 aktiviran (Dominant Format → Whole store → Rating)"
-  );
-
   if (!watchedAlbums || watchedAlbums.length === 0) {
     console.warn("🚫 Nema watched albuma za analizu formata.");
     return [];
@@ -7896,8 +7501,6 @@ function bbScenario7Pick4(
     topFormats.length === 1
       ? topFormats[0]
       : topFormats[Math.floor(Math.random() * topFormats.length)];
-
-  console.log("🎧 Dominantni format (iz watched):", dominantFormat);
 
   // 🎯 Filteruj celu radnju po dominantnom formatu
   const filtered = albums
@@ -7929,11 +7532,6 @@ function bbScenario7Pick4(
     }
   }
 
-  console.log(
-    "🎧 Rezultati za bbScenario7Pick4:",
-    selected.map((a) => `${a.title} – rating: ${a.rating}`)
-  );
-
   return selected;
 }
 
@@ -7947,10 +7545,6 @@ function bbScenario7Pick5(
   MAX_OCCURRENCES_PER_TITLE,
   watchedAlbums
 ) {
-  console.log(
-    "🎯 bbScenario7Pick5 aktiviran (Dominant Genre → Whole store → Rating)"
-  );
-
   if (!watchedAlbums || watchedAlbums.length === 0) {
     console.warn("🚫 Nema watched albuma za analizu žanra.");
     return [];
@@ -7984,8 +7578,6 @@ function bbScenario7Pick5(
       ? topGenres[0]
       : topGenres[Math.floor(Math.random() * topGenres.length)];
 
-  console.log("🎶 Dominantni žanr (iz watched):", dominantGenre);
-
   // 🎯 Filteruj celu radnju po dominantnom žanru
   const filtered = albums
     .filter(
@@ -8017,11 +7609,6 @@ function bbScenario7Pick5(
     }
   }
 
-  console.log(
-    "🎶 Rezultati za bbScenario7Pick5:",
-    selected.map((a) => `${a.title} – rating: ${a.rating}`)
-  );
-
   return selected;
 }
 
@@ -8034,11 +7621,6 @@ function bbScenario8Pick1(
   scenarioUsedTitles,
   MAX_OCCURRENCES_PER_TITLE
 ) {
-  console.log(
-    "🧪 bbScenario8Pick1 aktiviran (SCORING – prva polovina watched, vinyl)"
-  );
-  console.log("🎯 Ukupan broj albuma:", albums.length);
-
   const halfway = Math.ceil(albums.length / 2);
   const firstHalf = albums.slice(0, halfway);
 
@@ -8077,11 +7659,6 @@ function bbScenario8Pick1(
     }
   }
 
-  console.log(
-    "✨ Rezultati za bbScenario8Pick1:",
-    selected.map((a) => `${a.title} – score: ${a.bbScore.toFixed(2)}`)
-  );
-
   return selected;
 }
 // SCENARIO 8 / PICK 2
@@ -8093,11 +7670,6 @@ function bbScenario8Pick2(
   scenarioUsedTitles,
   MAX_OCCURRENCES_PER_TITLE
 ) {
-  console.log(
-    "🧪 bbScenario8Pick2 aktiviran (SCORING – druga polovina watched, vinyl)"
-  );
-  console.log("🎯 Ukupan broj albuma:", albums.length);
-
   const halfway = Math.ceil(albums.length / 2);
   const secondHalf = albums.slice(halfway);
 
@@ -8145,11 +7717,6 @@ function bbScenario8Pick2(
     }
   }
 
-  console.log(
-    "✨ Rezultati za bbScenario8Pick2:",
-    selected.map((a) => `${a.title} – score: ${a.bbScore.toFixed(2)}`)
-  );
-
   return selected;
 }
 // SCENARIO 8 / PICK 3
@@ -8161,10 +7728,6 @@ function bbScenario8Pick3(
   scenarioUsedTitles,
   MAX_OCCURRENCES_PER_TITLE
 ) {
-  console.log(
-    "🧪 bbScenario8Pick3 aktiviran (PRF rotacija – stock kroz tercile, watched, vinyl)"
-  );
-
   // 🎯 Filter: samo vinyl
   const filtered = albums.filter((a) => a.format.toLowerCase() === "vinyl");
 
@@ -8208,11 +7771,6 @@ function bbScenario8Pick3(
     cycle++;
   }
 
-  console.log(
-    "✨ Rezultati za bbScenario8Pick3:",
-    selected.map((a) => `${a.title} – stock: ${a.stock}`)
-  );
-
   return selected;
 }
 // SCENARIO 8 / PICK 4
@@ -8224,10 +7782,6 @@ function bbScenario8Pick4(
   scenarioUsedTitles,
   MAX_OCCURRENCES_PER_TITLE
 ) {
-  console.log(
-    "🧪 bbScenario8Pick4 aktiviran (PRF rotacija – cena kroz tercile, watched, vinyl)"
-  );
-
   // 🎯 Filter: samo vinyl
   const filtered = albums.filter(
     (a) => a.format.toLowerCase() === "vinyl" && a.price <= budget
@@ -8273,11 +7827,6 @@ function bbScenario8Pick4(
     cycle++;
   }
 
-  console.log(
-    "✨ Rezultati za bbScenario8Pick4:",
-    selected.map((a) => `${a.title} – $${a.price}`)
-  );
-
   return selected;
 }
 // SCENARIO 8 / PICK 5
@@ -8290,8 +7839,6 @@ function bbScenario8Pick5(
   MAX_OCCURRENCES_PER_TITLE,
   watchedAlbums
 ) {
-  console.log("🎯 bbScenario8Pick5 aktiviran");
-
   if (!Array.isArray(watchedAlbums) || watchedAlbums.length === 0) {
     console.warn("🚫 Nema watched albuma za analizu žanra.");
     return [];
@@ -8327,8 +7874,6 @@ function bbScenario8Pick5(
       ? topGenres[0]
       : topGenres[Math.floor(Math.random() * topGenres.length)];
 
-  console.log("🎶 Dominantni žanr:", dominantGenre);
-
   // 🎯 Filtriraj celu radnju po Vinyl + dominantni žanr
   const filtered = albums
     .filter((a) => {
@@ -8344,11 +7889,6 @@ function bbScenario8Pick5(
       return isVinyl && genreMatch && priceOK;
     })
     .sort((a, b) => (b.rating || 0) - (a.rating || 0));
-
-  console.log(
-    "📦 Filterovani kandidati za Pick5:",
-    filtered.map((a) => a.title)
-  );
 
   const selected = [];
   const usedTitles = new Set();
@@ -8368,10 +7908,6 @@ function bbScenario8Pick5(
     }
   }
 
-  console.log(
-    "✅ Rezultati (Pick5):",
-    selected.map((a) => a.title)
-  );
   return selected;
 }
 // SCENARIO 9 / PICK 1
@@ -8383,10 +7919,6 @@ function bbScenario9Pick1(
   scenarioUsedTitles,
   MAX_OCCURRENCES_PER_TITLE
 ) {
-  console.log(
-    "🧪 bbScenario9Pick1 aktiviran (SCORING – prva polovina watched, cd)"
-  );
-
   const halfway = Math.ceil(albums.length / 2);
   const firstHalf = albums.slice(0, halfway);
 
@@ -8424,11 +7956,6 @@ function bbScenario9Pick1(
     }
   }
 
-  console.log(
-    "✨ Rezultati za bbScenario9Pick1:",
-    selected.map((a) => `${a.title} – score: ${a.bbScore.toFixed(2)}`)
-  );
-
   return selected;
 }
 
@@ -8441,11 +7968,6 @@ function bbScenario9Pick2(
   scenarioUsedTitles,
   MAX_OCCURRENCES_PER_TITLE
 ) {
-  console.log(
-    "🧪 bbScenario9Pick2 aktiviran (SCORING – druga polovina watched, cd)"
-  );
-  console.log("🎯 Ukupan broj albuma:", albums.length);
-
   const halfway = Math.ceil(albums.length / 2);
   const secondHalf = albums.slice(halfway);
 
@@ -8492,11 +8014,6 @@ function bbScenario9Pick2(
     }
   }
 
-  console.log(
-    "✨ Rezultati za bbScenario9Pick2:",
-    selected.map((a) => `${a.title} – score: ${a.bbScore.toFixed(2)}`)
-  );
-
   return selected;
 }
 
@@ -8509,10 +8026,6 @@ function bbScenario9Pick3(
   scenarioUsedTitles,
   MAX_OCCURRENCES_PER_TITLE
 ) {
-  console.log(
-    "🧪 bbScenario9Pick3 aktiviran (PRF rotacija – stock kroz tercile, watched, cd)"
-  );
-
   const filtered = albums.filter((a) => a.format.toLowerCase() === "cd");
   const sortedByStock = [...filtered].sort((a, b) => a.stock - b.stock);
   const tercileSize = Math.ceil(sortedByStock.length / 3);
@@ -8553,11 +8066,6 @@ function bbScenario9Pick3(
     cycle++;
   }
 
-  console.log(
-    "✨ Rezultati za bbScenario9Pick3:",
-    selected.map((a) => `${a.title} – stock: ${a.stock}`)
-  );
-
   return selected;
 }
 
@@ -8570,10 +8078,6 @@ function bbScenario9Pick4(
   scenarioUsedTitles,
   MAX_OCCURRENCES_PER_TITLE
 ) {
-  console.log(
-    "🧪 bbScenario9Pick4 aktiviran (PRF rotacija – cena kroz tercile, watched, cd)"
-  );
-
   const filtered = albums.filter(
     (a) => a.format.toLowerCase() === "cd" && a.price <= budget
   );
@@ -8617,11 +8121,6 @@ function bbScenario9Pick4(
     cycle++;
   }
 
-  console.log(
-    "✨ Rezultati za bbScenario9Pick4:",
-    selected.map((a) => `${a.title} – $${a.price}`)
-  );
-
   return selected;
 }
 
@@ -8635,8 +8134,6 @@ function bbScenario9Pick5(
   MAX_OCCURRENCES_PER_TITLE,
   watchedAlbums
 ) {
-  console.log("🎯 bbScenario9Pick5 aktiviran");
-
   if (!Array.isArray(watchedAlbums) || watchedAlbums.length === 0) {
     console.warn("🚫 Nema watched albuma za analizu žanra.");
     return [];
@@ -8671,8 +8168,6 @@ function bbScenario9Pick5(
       ? topGenres[0]
       : topGenres[Math.floor(Math.random() * topGenres.length)];
 
-  console.log("🎶 Dominantni žanr:", dominantGenre);
-
   const filtered = albums
     .filter((a) => {
       const isCD = a.format?.toLowerCase() === "cd";
@@ -8687,11 +8182,6 @@ function bbScenario9Pick5(
       return isCD && genreMatch && priceOK;
     })
     .sort((a, b) => (b.rating || 0) - (a.rating || 0));
-
-  console.log(
-    "📦 Filterovani kandidati za Pick5:",
-    filtered.map((a) => a.title)
-  );
 
   const selected = [];
   const usedTitles = new Set();
@@ -8711,10 +8201,6 @@ function bbScenario9Pick5(
     }
   }
 
-  console.log(
-    "✅ Rezultati (Pick5):",
-    selected.map((a) => a.title)
-  );
   return selected;
 }
 
@@ -8728,10 +8214,6 @@ function bbScenario10Pick1(
   MAX_OCCURRENCES_PER_TITLE,
   selectedGenre
 ) {
-  console.log(
-    "🧪 bbScenario10Pick1 aktiviran (SCORING – prva polovina store, genre filter)"
-  );
-
   const halfway = Math.ceil(albums.length / 2);
   const firstHalf = albums.slice(0, halfway);
 
@@ -8775,11 +8257,6 @@ function bbScenario10Pick1(
     }
   }
 
-  console.log(
-    "✨ Rezultati za bbScenario10Pick1:",
-    selected.map((a) => `${a.title} – score: ${a.bbScore.toFixed(2)}`)
-  );
-
   return selected;
 }
 // SCENARIO 10 / PICK 2
@@ -8792,10 +8269,6 @@ function bbScenario10Pick2(
   MAX_OCCURRENCES_PER_TITLE,
   selectedGenre
 ) {
-  console.log(
-    "🧪 bbScenario10Pick2 aktiviran (SCORING – druga polovina store, genre filter)"
-  );
-
   const halfway = Math.ceil(albums.length / 2);
   const secondHalf = albums.slice(halfway);
 
@@ -8844,11 +8317,6 @@ function bbScenario10Pick2(
     }
   }
 
-  console.log(
-    "✨ Rezultati za bbScenario10Pick2:",
-    selected.map((a) => `${a.title} – score: ${a.bbScore.toFixed(2)}`)
-  );
-
   return selected;
 }
 // SCENARIO 10 / PICK 3
@@ -8861,10 +8329,6 @@ function bbScenario10Pick3(
   MAX_OCCURRENCES_PER_TITLE,
   selectedGenre
 ) {
-  console.log(
-    "🧪 bbScenario10Pick3 aktiviran (PRF – stock kroz tercile, genre filter)"
-  );
-
   // 🎯 Filter: po žanru
   const filtered = albums.filter(
     (a) =>
@@ -8912,11 +8376,6 @@ function bbScenario10Pick3(
     cycle++;
   }
 
-  console.log(
-    "✨ Rezultati za bbScenario10Pick3:",
-    selected.map((a) => `${a.title} – stock: ${a.stock}`)
-  );
-
   return selected;
 }
 // SCENARIO 10 / PICK 4
@@ -8929,10 +8388,6 @@ function bbScenario10Pick4(
   MAX_OCCURRENCES_PER_TITLE,
   selectedGenre
 ) {
-  console.log(
-    "🧪 bbScenario10Pick4 aktiviran (PRF – cena kroz tercile, genre filter)"
-  );
-
   // 🎯 Filter: po žanru i budžetu
   const filtered = albums.filter(
     (a) =>
@@ -8981,11 +8436,6 @@ function bbScenario10Pick4(
     cycle++;
   }
 
-  console.log(
-    "✨ Rezultati za bbScenario10Pick4:",
-    selected.map((a) => `${a.title} – $${a.price}`)
-  );
-
   return selected;
 }
 // SCENARIO 10 / PICK 5
@@ -9000,8 +8450,6 @@ function bbScenario10Pick5(
   watchedAlbums,
   selectedGenre
 ) {
-  console.log("🎯 bbScenario10Pick5 aktiviran");
-
   if (!Array.isArray(watchedAlbums) || watchedAlbums.length === 0) {
     console.warn("🚫 Nema watched albuma za analizu formata.");
     return [];
@@ -9033,8 +8481,6 @@ function bbScenario10Pick5(
       ? topFormats[0]
       : topFormats[Math.floor(Math.random() * topFormats.length)];
 
-  console.log("🎧 Dominantni format:", dominantFormat);
-
   // 🎯 Filter: whole store → dominantni format + izabrani žanr
   const filtered = albums
     .filter((a) => {
@@ -9046,11 +8492,6 @@ function bbScenario10Pick5(
       return formatMatch && genreMatch && priceOK;
     })
     .sort((a, b) => (b.rating || 0) - (a.rating || 0));
-
-  console.log(
-    "📦 Filterovani kandidati za Pick5:",
-    filtered.map((a) => a.title)
-  );
 
   const selected = [];
   const usedTitles = new Set();
@@ -9070,10 +8511,6 @@ function bbScenario10Pick5(
     }
   }
 
-  console.log(
-    "✅ Rezultati za bbScenario10Pick5:",
-    selected.map((a) => a.title)
-  );
   return selected;
 }
 // SCENARIO 11 / PICK 1
@@ -9086,10 +8523,6 @@ function bbScenario11Pick1(
   MAX_OCCURRENCES_PER_TITLE,
   selectedGenre
 ) {
-  console.log(
-    "🧪 bbScenario11Pick1 aktiviran (SCORING – prva polovina store, vinyls, genre filter)"
-  );
-
   const halfway = Math.ceil(albums.length / 2);
   const firstHalf = albums.slice(0, halfway);
 
@@ -9139,11 +8572,6 @@ function bbScenario11Pick1(
     }
   }
 
-  console.log(
-    "✨ Rezultati za bbScenario11Pick1:",
-    selected.map((a) => `${a.title} – score: ${a.bbScore.toFixed(2)}`)
-  );
-
   return selected;
 }
 // SCENARIO 11 / PICK 2
@@ -9156,10 +8584,6 @@ function bbScenario11Pick2(
   MAX_OCCURRENCES_PER_TITLE,
   selectedGenre
 ) {
-  console.log(
-    "🧪 bbScenario11Pick2 aktiviran (SCORING – druga polovina store, vinyl, genre filter)"
-  );
-
   const halfway = Math.ceil(albums.length / 2);
   const secondHalf = albums.slice(halfway);
 
@@ -9209,11 +8633,6 @@ function bbScenario11Pick2(
     }
   }
 
-  console.log(
-    "✨ Rezultati za bbScenario11Pick2:",
-    selected.map((a) => `${a.title} – score: ${a.bbScore.toFixed(2)}`)
-  );
-
   return selected;
 }
 
@@ -9227,10 +8646,6 @@ function bbScenario11Pick3(
   MAX_OCCURRENCES_PER_TITLE,
   selectedGenre
 ) {
-  console.log(
-    "🧪 bbScenario11Pick3 aktiviran (PRF – stock kroz tercile, vinyl, genre)"
-  );
-
   const filtered = albums.filter(
     (a) =>
       a.format?.toLowerCase() === "vinyl" &&
@@ -9277,11 +8692,6 @@ function bbScenario11Pick3(
     cycle++;
   }
 
-  console.log(
-    "✨ Rezultati za bbScenario11Pick3:",
-    selected.map((a) => `${a.title} – stock: ${a.stock}`)
-  );
-
   return selected;
 }
 
@@ -9295,10 +8705,6 @@ function bbScenario11Pick4(
   MAX_OCCURRENCES_PER_TITLE,
   selectedGenre
 ) {
-  console.log(
-    "🧪 bbScenario11Pick4 aktiviran (PRF – cena kroz tercile, vinyl, genre)"
-  );
-
   const filtered = albums.filter(
     (a) =>
       a.format?.toLowerCase() === "vinyl" &&
@@ -9345,11 +8751,6 @@ function bbScenario11Pick4(
     cycle++;
   }
 
-  console.log(
-    "✨ Rezultati za bbScenario11Pick4:",
-    selected.map((a) => `${a.title} – $${a.price}`)
-  );
-
   return selected;
 }
 
@@ -9363,10 +8764,6 @@ function bbScenario11Pick5(
   MAX_OCCURRENCES_PER_TITLE,
   selectedGenre
 ) {
-  console.log(
-    "🎯 bbScenario11Pick5 aktiviran (Whole store → Vinyls → Genre → Rating)"
-  );
-
   const filtered = albums
     .filter(
       (a) =>
@@ -9396,10 +8793,6 @@ function bbScenario11Pick5(
     }
   }
 
-  console.log(
-    "✅ Rezultati za bbScenario11Pick5:",
-    selected.map((a) => a.title)
-  );
   return selected;
 }
 // SCENARIO 12 / PICK 1
@@ -9412,10 +8805,6 @@ function bbScenario12Pick1(
   MAX_OCCURRENCES_PER_TITLE,
   selectedGenre
 ) {
-  console.log(
-    "🧚 bbScenario12Pick1 aktiviran (SCORING – prva polovina store, CDs, genre filter)"
-  );
-
   const halfway = Math.ceil(albums.length / 2);
   const firstHalf = albums.slice(0, halfway);
 
@@ -9463,11 +8852,6 @@ function bbScenario12Pick1(
     }
   }
 
-  console.log(
-    "✨ Rezultati za bbScenario12Pick1:",
-    selected.map((a) => `${a.title} – score: ${a.bbScore.toFixed(2)}`)
-  );
-
   return selected;
 }
 
@@ -9481,10 +8865,6 @@ function bbScenario12Pick2(
   MAX_OCCURRENCES_PER_TITLE,
   selectedGenre
 ) {
-  console.log(
-    "🧪 bbScenario12Pick2 aktiviran (SCORING – druga polovina store, CD, genre filter)"
-  );
-
   const halfway = Math.ceil(albums.length / 2);
   const secondHalf = albums.slice(halfway);
 
@@ -9531,10 +8911,6 @@ function bbScenario12Pick2(
     }
   }
 
-  console.log(
-    "✨ Rezultati za bbScenario12Pick2:",
-    selected.map((a) => `${a.title} – score: ${a.bbScore.toFixed(2)}`)
-  );
   return selected;
 }
 
@@ -9548,10 +8924,6 @@ function bbScenario12Pick3(
   MAX_OCCURRENCES_PER_TITLE,
   selectedGenre
 ) {
-  console.log(
-    "🧪 bbScenario12Pick3 aktiviran (PRF – stock kroz tercile, CD, genre)"
-  );
-
   const filtered = albums.filter(
     (a) =>
       a.format?.toLowerCase() === "cd" &&
@@ -9595,10 +8967,6 @@ function bbScenario12Pick3(
     cycle++;
   }
 
-  console.log(
-    "✨ Rezultati za bbScenario12Pick3:",
-    selected.map((a) => `${a.title} – stock: ${a.stock}`)
-  );
   return selected;
 }
 
@@ -9612,10 +8980,6 @@ function bbScenario12Pick4(
   MAX_OCCURRENCES_PER_TITLE,
   selectedGenre
 ) {
-  console.log(
-    "🧪 bbScenario12Pick4 aktiviran (PRF – cena kroz tercile, CD, genre)"
-  );
-
   const filtered = albums.filter(
     (a) =>
       a.format?.toLowerCase() === "cd" &&
@@ -9659,10 +9023,6 @@ function bbScenario12Pick4(
     cycle++;
   }
 
-  console.log(
-    "✨ Rezultati za bbScenario12Pick4:",
-    selected.map((a) => `${a.title} – $${a.price}`)
-  );
   return selected;
 }
 
@@ -9676,10 +9036,6 @@ function bbScenario12Pick5(
   MAX_OCCURRENCES_PER_TITLE,
   selectedGenre
 ) {
-  console.log(
-    "🎯 bbScenario12Pick5 aktiviran (Whole store → CDs → Genre → Rating)"
-  );
-
   const filtered = albums
     .filter(
       (a) =>
@@ -9708,10 +9064,6 @@ function bbScenario12Pick5(
     }
   }
 
-  console.log(
-    "✅ Rezultati za bbScenario12Pick5:",
-    selected.map((a) => a.title)
-  );
   return selected;
 }
 
