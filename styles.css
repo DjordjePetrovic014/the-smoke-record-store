@@ -718,9 +718,11 @@ body.menu-open #sideMenu {
 }
 
 /* TESTIMONIALS */
+
 .about-testimonials blockquote {
   font-style: italic;
   margin-bottom: 1rem;
+  margin-left: 1rem;
   border-left: 3px solid #ccc;
   padding-left: 1rem;
   font-family: "Outfit", sans-serif;
