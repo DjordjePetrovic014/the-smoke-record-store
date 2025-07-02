@@ -101,6 +101,8 @@ function renderAlbums(page, albumList = albums) {
   albumsToDisplay.forEach((album) => {
     const albumCard = document.createElement("div");
     albumCard.classList.add("album-card");
+    albumCard.setAttribute("data-id", album.id);
+
     albumCard.innerHTML = `
       <img src="${album.cover}" alt="${album.title}" class="album-cover" />
       <h3 class="album-title">${album.title}</h3>
@@ -7430,5 +7432,107 @@ fetch("albums.json")
 
     renderAlbums(1, albums);
     setupPagination(albums);
+
+    // ⬇⬇⬇ OVDE dodajemo click listener TEK nakon što su albumi prikazani
+    document
+      .getElementById("albumGrid")
+      .addEventListener("click", function (e) {
+        // Pokreni samo ako je klik bio na slici
+        if (!e.target.classList.contains("album-cover")) return;
+
+        const albumCard = e.target.closest(".album-card");
+        if (!albumCard) return;
+
+        const albumId = parseInt(albumCard.dataset.id);
+        const album = albums.find((a) => a.id === albumId);
+        if (album) {
+          openAlbumModal(album);
+        }
+      });
   })
   .catch((err) => console.error("Error loading JSON file:", err));
+
+///////////  ALBUM DETAILS ACTION //////////////////////
+
+const modal = document.getElementById("albumModal");
+const modalClose = document.getElementById("modalClose");
+
+// Elementi unutar modala
+const modalCover = document.getElementById("modalCover");
+const modalGenre = document.getElementById("modalGenre");
+const modalYear = document.getElementById("modalYear");
+const modalDuration = document.getElementById("modalDuration");
+const modalStock = document.getElementById("modalStock");
+const modalPrice = document.getElementById("modalPrice");
+const modalTitle = document.getElementById("modalTitle");
+const modalFormat = document.getElementById("modalFormat");
+const modalTracklist = document.getElementById("modalTracklist");
+
+// Glavna funkcija za otvaranje modala sa podacima
+function openAlbumModal(album) {
+  modalCover.src = album.cover;
+  modal.style.setProperty("--modal-bg", `url(${album.cover})`); //bacground picture//
+  modalGenre.textContent = album.genre;
+  modalStock.textContent = album.stock;
+  modalPrice.textContent = album.price;
+  modalTitle.textContent = album.title;
+  modalFormat.textContent = album.format;
+  modalYear.textContent = "Loading...";
+  modalDuration.textContent = "Loading...";
+  modalTracklist.innerHTML = "<p>Loading tracklist...</p>";
+
+  // Prikaz modala
+  modal.classList.remove("hidden");
+
+  // Fetch ka MusicBrainz API-u ako postoji musicbrainzId
+  if (album.musicbrainzId) {
+    fetch(
+      `https://musicbrainz.org/ws/2/release/${album.musicbrainzId}?inc=recordings&fmt=json`
+    )
+      .then((res) => res.json())
+      .then((data) => {
+        const date = data.date || "Unknown";
+        const tracks = data.media?.[0]?.tracks || [];
+
+        modalYear.textContent = date.slice(0, 4);
+
+        let totalMs = 0;
+        const trackItems = tracks.map((track) => {
+          const name = track.title;
+          const length = track.length || 0;
+          totalMs += length;
+
+          const minutes = Math.floor(length / 60000);
+          const seconds = Math.floor((length % 60000) / 1000)
+            .toString()
+            .padStart(2, "0");
+
+          return `<li><span class="track-name">${name}</span><span class="track-length">${minutes}:${seconds}</span></li>`;
+        });
+
+        modalTracklist.innerHTML = `<ol class="tracklist">${trackItems.join(
+          ""
+        )}</ol>`;
+
+        const totalMin = Math.floor(totalMs / 60000);
+        const totalSec = Math.floor((totalMs % 60000) / 1000)
+          .toString()
+          .padStart(2, "0");
+        modalDuration.textContent = `${totalMin}:${totalSec}`;
+      })
+      .catch((err) => {
+        modalYear.textContent = "Unavailable";
+        modalDuration.textContent = "Unavailable";
+        modalTracklist.innerHTML = "<p>Tracklist not available.</p>";
+      });
+  } else {
+    modalYear.textContent = "Unavailable";
+    modalDuration.textContent = "Unavailable";
+    modalTracklist.innerHTML = "<p>Tracklist not available.</p>";
+  }
+}
+
+// Zatvaranje modala
+modalClose.addEventListener("click", () => {
+  modal.classList.add("hidden");
+});

@@ -9,7 +9,8 @@
     "cover": "images/covers-thumbs/the-honeydrippers-volume-one-front-thumb.jpg",
     "rating": 0.326,
     "boost": 0,
-    "bbScore": 0
+    "bbScore": 0,
+    "musicbrainzId": "eeeb1b1a-4d90-41b6-aac2-0f252df2146f"
   },
   {
     "id": 2,
@@ -21,7 +22,8 @@
     "cover": "images/covers-thumbs/funkdoobiest-which-doobie-u-b-front-thumb.jpg",
     "rating": 0.321,
     "boost": 0,
-    "bbScore": 0
+    "bbScore": 0,
+    "musicbrainzId": "0764bf15-4424-495d-97d4-f2aa6ee3fd83"
   },
   {
     "id": 3,
@@ -33,7 +35,8 @@
     "cover": "images/covers-thumbs/robben-ford-bringing-it-back-home-front-thumb.jpg",
     "rating": 0.35,
     "boost": 0,
-    "bbScore": 0
+    "bbScore": 0,
+    "musicbrainzId": "0ae61688-7819-42a2-91be-e7825eeeea33"
   },
   {
     "id": 4,
@@ -45,7 +48,8 @@
     "cover": "images/covers-thumbs/house-of-pain-fine-malt-lyrics-front-thumb.jpg",
     "rating": 0.319,
     "boost": 0,
-    "bbScore": 0
+    "bbScore": 0,
+    "musicbrainzId": "f9490168-7fa1-4076-a5e2-ee6a246584c6"
   },
   {
     "id": 5,
@@ -57,7 +61,8 @@
     "cover": "images/covers-thumbs/tom-waits-rain-dogs-front-thumb.jpg",
     "rating": 0.404,
     "boost": 0,
-    "bbScore": 0
+    "bbScore": 0,
+    "musicbrainzId": "46038710-d5ed-42aa-b09e-2f467da90f11"
   },
   {
     "id": 6,
@@ -69,7 +74,8 @@
     "cover": "images/covers-thumbs/cypress-hill-1991-front-thumb.jpg",
     "rating": 0.349,
     "boost": 0,
-    "bbScore": 0
+    "bbScore": 0,
+    "musicbrainzId": "5f46a6e4-176a-425b-9981-96348358329f"
   },
   {
     "id": 7,
@@ -81,7 +87,8 @@
     "cover": "images/covers-thumbs/etta-james-tell-mama-Cover-Art_result.webp",
     "rating": 0.382,
     "boost": 0,
-    "bbScore": 0
+    "bbScore": 0,
+    "musicbrainzId": "eef6d2cd-a0b2-4ff9-a415-0e45b08e4732"
   },
 
   {
@@ -94,11 +101,12 @@
     "cover": "images/covers-thumbs/pearl-jam-ten-front-front-thumb.jpg",
     "rating": 0.374,
     "boost": 0,
-    "bbScore": 0
+    "bbScore": 0,
+    "musicbrainzId": "8d0bc6d4-8700-44e8-90c8-b86c23e7ff14"
   },
   {
     "id": 9,
-    "title": "Black Crowes - Shake Your Money Maker",
+    "title": "The Black Crowes - Shake Your Money Maker",
     "format": "CD",
     "genre": "Rock, Blues",
     "price": 9,
@@ -106,7 +114,8 @@
     "cover": "images/covers-thumbs/the-black-crowes-shake-your-money-maker-front-thumb.jpg",
     "rating": 0.354,
     "boost": 0,
-    "bbScore": 0
+    "bbScore": 0,
+    "musicbrainzId": "db5fd0a4-ebf6-3bc6-8b52-1684ac858199"
   },
   {
     "id": 10,
@@ -118,7 +127,8 @@
     "cover": "images/covers-thumbs/stan-getz-and-joao-gilberto-featuring-antonio-carlos-jobim-getz-gilberto-Cover-Art_result.webp",
     "rating": 0.401,
     "boost": 0,
-    "bbScore": 0
+    "bbScore": 0,
+    "musicbrainzId": "3dbe8250-a4e4-4bc4-a32c-db0e3a88375d"
   },
 
   {
@@ -131,7 +141,8 @@
     "cover": "images/covers-thumbs/stevie-ray-vaughan-and-double-double-texas-flood-front-thumb.jpg",
     "rating": 0.376,
     "boost": 0,
-    "bbScore": 0
+    "bbScore": 0,
+    "musicbrainzId": "882f20dc-3868-4603-b93d-dca32f3ec795"
   },
   {
     "id": 12,
@@ -143,7 +154,8 @@
     "cover": "images/covers-thumbs/wu-tang-clan-enter-the-wu-tang-front-thumb.jpg",
     "rating": 0.423,
     "boost": 0,
-    "bbScore": 0
+    "bbScore": 0,
+    "musicbrainzId": "ac4714c8-28e4-47c0-adbf-fd982fb45768"
   },
   {
     "id": 13,
@@ -155,11 +167,12 @@
     "cover": "images/covers-thumbs/chet-baker-chet-front-thumb.jpg",
     "rating": 0.363,
     "boost": 0,
-    "bbScore": 0
+    "bbScore": 0,
+    "musicbrainzId": "4ae051ec-8914-4432-9803-e76308268005"
   },
   {
     "id": 14,
-    "title": "Bruce Springsteen - Darkness on the Edge of Town0.392",
+    "title": "Bruce Springsteen - Darkness on the Edge of Town",
     "format": "Vinyl",
     "genre": "Rock",
     "price": 25,
@@ -167,7 +180,8 @@
     "cover": "images/covers-thumbs/bruce-springsteen-darkness-on-the-edge-of-town-Cover-Art_result.webp",
     "rating": 0.392,
     "boost": 0,
-    "bbScore": 0
+    "bbScore": 0,
+    "musicbrainzId": "6c81449f-86d4-4bea-9916-a5415b396edc"
   },
 
   {
@@ -180,7 +194,8 @@
     "cover": "images/covers-thumbs/judgment-night-music-from-the-motion-picture-front-thumb.jpg",
     "rating": 0.354,
     "boost": 0,
-    "bbScore": 0
+    "bbScore": 0,
+    "musicbrainzId": "16e433c3-1afe-43a8-be20-5441529c8d48"
   },
   {
     "id": 16,
@@ -192,7 +207,8 @@
     "cover": "images/covers-thumbs/count-basie-orchestra-neal-hefti-arrangements-basie-Cover-Art_result.webp",
     "rating": 0.364,
     "boost": 0,
-    "bbScore": 0
+    "bbScore": 0,
+    "musicbrainzId": "835490a5-7bb2-4cba-830d-b79d1ffc4222"
   },
 
   {
@@ -205,11 +221,12 @@
     "cover": "images/covers-thumbs/rage-against-the-machine-rage-against-the-machine-front-thumb.jpg",
     "rating": 0.399,
     "boost": 0,
-    "bbScore": 0
+    "bbScore": 0,
+    "musicbrainzId": "e956c901-acb7-48d6-9dc6-389a5f91f372"
   },
   {
     "id": 18,
-    "title": "Black Crowes - Shake Your Money Maker",
+    "title": "The Black Crowes - Shake Your Money Maker",
     "format": "Vinyl",
     "genre": "Rock, Blues",
     "price": 28,
@@ -217,7 +234,8 @@
     "cover": "images/covers-thumbs/the-black-crowes-shake-your-money-maker-front-thumb.jpg",
     "rating": 0.354,
     "boost": 0,
-    "bbScore": 0
+    "bbScore": 0,
+    "musicbrainzId": "db5fd0a4-ebf6-3bc6-8b52-1684ac858199"
   },
   {
     "id": 19,
@@ -229,7 +247,8 @@
     "cover": "images/covers-thumbs/ac-dc-back-in-black-front-thumb.jpg",
     "rating": 0.344,
     "boost": 0,
-    "bbScore": 0
+    "bbScore": 0,
+    "musicbrainzId": "4bbe3188-d626-4aff-82c0-87d455262f49"
   },
   {
     "id": 20,
@@ -241,7 +260,8 @@
     "cover": "images/covers-thumbs/alice-clark-alice-clark-front-thumb.jpg",
     "rating": 0.351,
     "boost": 0,
-    "bbScore": 0
+    "bbScore": 0,
+    "musicbrainzId": "1c5739b4-dd56-4f5b-ace4-6c5212f3375e"
   },
   {
     "id": 21,
@@ -253,7 +273,8 @@
     "cover": "images/covers-thumbs/radiohead-ok-computer-front-thumb.jpg",
     "rating": 0.43,
     "boost": 0,
-    "bbScore": 0
+    "bbScore": 0,
+    "musicbrainzId": "425d8db9-88a3-31e2-bd23-b1a967626dd5"
   },
   {
     "id": 22,
@@ -265,7 +286,8 @@
     "cover": "images/covers-thumbs/sade-promise-Cover-Art_result.webp",
     "rating": 0.396,
     "boost": 0,
-    "bbScore": 0
+    "bbScore": 0,
+    "musicbrainzId": "a3c7b628-29f8-386d-b352-1a6a04cafd42"
   },
   {
     "id": 23,
@@ -277,7 +299,8 @@
     "cover": "images/covers-thumbs/beastie-boys-check-your-head-Cover-Art_result.webp",
     "rating": 0.372,
     "boost": 0,
-    "bbScore": 0
+    "bbScore": 0,
+    "musicbrainzId": "8df53a98-da10-4084-a5af-b9b3b64bcb33"
   },
 
   {
@@ -290,7 +313,8 @@
     "cover": "images/covers-thumbs/nas-illmatic-front-thumb.jpg",
     "rating": 0.427,
     "boost": 0,
-    "bbScore": 0
+    "bbScore": 0,
+    "musicbrainzId": "f00af81c-9249-49d0-b3f5-8b6725bd1900"
   },
   {
     "id": 25,
@@ -302,7 +326,8 @@
     "cover": "images/covers-thumbs/neil-young-on-the-beach-Cover-Art_result.webp",
     "rating": 0.408,
     "boost": 0,
-    "bbScore": 0
+    "bbScore": 0,
+    "musicbrainzId": "39fe3778-362c-4762-89fc-c03235fd8117"
   },
   {
     "id": 26,
@@ -314,7 +339,8 @@
     "cover": "images/covers-thumbs/mos-def-black-on-both-sides-Cover-Art_result.webp",
     "rating": 0.407,
     "boost": 0,
-    "bbScore": 0
+    "bbScore": 0,
+    "musicbrainzId": "5ea268a0-f733-4058-b930-9eb5738a2237"
   },
 
   {
@@ -327,7 +353,8 @@
     "cover": "images/covers-thumbs/pink-floyd–the-dark-side-of-the-moon-front-thumb.jpg",
     "rating": 0.426,
     "boost": 0,
-    "bbScore": 0
+    "bbScore": 0,
+    "musicbrainzId": "b84ee12a-09ef-421b-82de-0441a926375b"
   },
   {
     "id": 28,
@@ -339,7 +366,8 @@
     "cover": "images/covers-thumbs/cypress-hill-1991-front-thumb.jpg",
     "rating": 0.349,
     "boost": 0,
-    "bbScore": 0
+    "bbScore": 0,
+    "musicbrainzId": "5f46a6e4-176a-425b-9981-96348358329f"
   },
   {
     "id": 29,
@@ -351,7 +379,8 @@
     "cover": "images/covers-thumbs/miles-davis-kind-of-blue-front-thumb.jpg",
     "rating": 0.424,
     "boost": 0,
-    "bbScore": 0
+    "bbScore": 0,
+    "musicbrainzId": "bee5e0cd-1767-4a8e-9578-6455e87ba60b"
   },
   {
     "id": 30,
@@ -363,7 +392,8 @@
     "cover": "images/covers-thumbs/julian-cannonball-adderley-somethin-else-front-thumb.jpg",
     "rating": 0.392,
     "boost": 0,
-    "bbScore": 0
+    "bbScore": 0,
+    "musicbrainzId": "6abffedf-0980-3a30-8e53-8652ad6e83e5"
   },
   {
     "id": 31,
@@ -375,7 +405,8 @@
     "cover": "images/covers-thumbs/chet-baker-chet-front-thumb.jpg",
     "rating": 0.363,
     "boost": 0,
-    "bbScore": 0
+    "bbScore": 0,
+    "musicbrainzId": "4ae051ec-8914-4432-9803-e76308268005"
   },
   {
     "id": 32,
@@ -387,7 +418,8 @@
     "cover": "images/covers-thumbs/the-meters-the-meters-front-thumb.jpg",
     "rating": 0.369,
     "boost": 0,
-    "bbScore": 0
+    "bbScore": 0,
+    "musicbrainzId": "483b35e8-15a0-4907-bc9e-a41bed449e7f"
   },
   {
     "id": 33,
@@ -399,7 +431,8 @@
     "cover": "images/covers-thumbs/dave-brubeck-time-out-front-thumb.jpg",
     "rating": 0.394,
     "boost": 0,
-    "bbScore": 0
+    "bbScore": 0,
+    "musicbrainzId": "fdc00f1e-7d3b-4f5b-bf87-7da137060921"
   },
   {
     "id": 34,
@@ -411,7 +444,8 @@
     "cover": "images/covers-thumbs/wu-tang-clan-enter-the-wu-tang-front-thumb.jpg",
     "rating": 0.423,
     "boost": 0,
-    "bbScore": 0
+    "bbScore": 0,
+    "musicbrainzId": "ac4714c8-28e4-47c0-adbf-fd982fb45768"
   },
   {
     "id": 35,
@@ -423,7 +457,8 @@
     "cover": "images/covers-thumbs/rage-against-the-machine-rage-against-the-machine-front-thumb.jpg",
     "rating": 0.399,
     "boost": 0,
-    "bbScore": 0
+    "bbScore": 0,
+    "musicbrainzId": "e956c901-acb7-48d6-9dc6-389a5f91f372"
   },
   {
     "id": 36,
@@ -435,7 +470,8 @@
     "cover": "images/covers-thumbs/nwa-niggaz4life-front-thumb.jpg",
     "rating": 0.332,
     "boost": 0,
-    "bbScore": 0
+    "bbScore": 0,
+    "musicbrainzId": "ddd09a83-fb3d-4c49-a97d-5755ae4eea26"
   },
   {
     "id": 37,
@@ -447,7 +483,8 @@
     "cover": "images/covers-thumbs/radiohead-ok-computer-front-thumb.jpg",
     "rating": 0.43,
     "boost": 0,
-    "bbScore": 0
+    "bbScore": 0,
+    "musicbrainzId": "425d8db9-88a3-31e2-bd23-b1a967626dd5"
   },
   {
     "id": 38,
@@ -459,7 +496,8 @@
     "cover": "images/covers-thumbs/bob-dylan-highway-61-revisited-front-thumb.jpg",
     "rating": 0.416,
     "boost": 0,
-    "bbScore": 0
+    "bbScore": 0,
+    "musicbrainzId": "d61a2bd9-81ac-4023-bd22-1c884d4a176c"
   },
   {
     "id": 39,
@@ -471,7 +509,8 @@
     "cover": "images/covers-thumbs/alice-clark-alice-clark-front-thumb.jpg",
     "rating": 0.351,
     "boost": 0,
-    "bbScore": 0
+    "bbScore": 0,
+    "musicbrainzId": "1c5739b4-dd56-4f5b-ace4-6c5212f3375e"
   },
   {
     "id": 40,
@@ -483,7 +522,8 @@
     "cover": "images/covers-thumbs/muddy-waters-folk-singer-front-thumb.jpg",
     "rating": 0.376,
     "boost": 0,
-    "bbScore": 0
+    "bbScore": 0,
+    "musicbrainzId": "4f4a2e6c-109a-46df-801c-dacd46ad4c97"
   },
   {
     "id": 41,
@@ -495,7 +535,8 @@
     "cover": "images/covers-thumbs/robert-cray-strong-persuader-Cover-Art_result.webp",
     "rating": 0.363,
     "boost": 0,
-    "bbScore": 0
+    "bbScore": 0,
+    "musicbrainzId": "b136f024-0a05-438d-b229-242f985b2c21"
   },
 
   {
@@ -508,7 +549,8 @@
     "cover": "images/covers-thumbs/the-meters-the-meters-front-thumb.jpg",
     "rating": 0.369,
     "boost": 0,
-    "bbScore": 0
+    "bbScore": 0,
+    "musicbrainzId": "483b35e8-15a0-4907-bc9e-a41bed449e7f"
   },
   {
     "id": 43,
@@ -520,7 +562,8 @@
     "cover": "images/covers-thumbs/snoop-doggy-dogg-doggystyle-front-thumb.jpg",
     "rating": 0.386,
     "boost": 0,
-    "bbScore": 0
+    "bbScore": 0,
+    "musicbrainzId": "d7a96c61-531f-4d2f-9873-4acaf3ba4ce0"
   },
   {
     "id": 44,
@@ -532,7 +575,8 @@
     "cover": "images/covers-thumbs/john-scofield-quiet-Cover-Art_result.webp",
     "rating": 0.367,
     "boost": 0,
-    "bbScore": 0
+    "bbScore": 0,
+    "musicbrainzId": "f6005606-57a4-42e3-b75b-f8d1bf34e8b2"
   },
 
   {
@@ -545,7 +589,8 @@
     "cover": "images/covers-thumbs/herbie-hancock-head-hunters-Cover-Art_result.webp",
     "rating": 0.403,
     "boost": 0,
-    "bbScore": 0
+    "bbScore": 0,
+    "musicbrainzId": "267a7c89-3624-4b7a-b7a2-aefc2bdc5e89"
   },
 
   {
@@ -558,7 +603,8 @@
     "cover": "images/covers-thumbs/john-coltrane-and-johnny-hartman-john-coltrane-and-johnny-hartman-front-thumb.jpg",
     "rating": 0.37,
     "boost": 0,
-    "bbScore": 0
+    "bbScore": 0,
+    "musicbrainzId": "bb094e8d-3bd2-3828-8ae1-9a232ca8916c"
   },
   {
     "id": 47,
@@ -570,7 +616,8 @@
     "cover": "images/covers-thumbs/public-enemy-fear-of-a-black-planet-front-thumb.jpg",
     "rating": 0.385,
     "boost": 0,
-    "bbScore": 0
+    "bbScore": 0,
+    "musicbrainzId": "b1ec7150-bfd2-4dc2-b7c3-8a82826acc29"
   },
   {
     "id": 48,
@@ -582,7 +629,8 @@
     "cover": "images/covers-thumbs/miles-davis-kind-of-blue-front-thumb.jpg",
     "rating": 0.424,
     "boost": 0,
-    "bbScore": 0
+    "bbScore": 0,
+    "musicbrainzId": "bee5e0cd-1767-4a8e-9578-6455e87ba60b"
   },
   {
     "id": 49,
@@ -594,7 +642,8 @@
     "cover": "images/covers-thumbs/public-enemy-fear-of-a-black-planet-front-thumb.jpg",
     "rating": 0.385,
     "boost": 0,
-    "bbScore": 0
+    "bbScore": 0,
+    "musicbrainzId": "b1ec7150-bfd2-4dc2-b7c3-8a82826acc29"
   },
   {
     "id": 50,
@@ -606,7 +655,8 @@
     "cover": "images/covers-thumbs/the-notorious-big-ready-to-die-front-thumb.jpg",
     "rating": 0.404,
     "boost": 0,
-    "bbScore": 0
+    "bbScore": 0,
+    "musicbrainzId": "c39794bb-1886-42d9-8a8e-a1be8ae8d5fa"
   },
   {
     "id": 51,
@@ -618,7 +668,8 @@
     "cover": "images/covers-thumbs/dave-brubeck-time-out-front-thumb.jpg",
     "rating": 0.394,
     "boost": 0,
-    "bbScore": 0
+    "bbScore": 0,
+    "musicbrainzId": "fdc00f1e-7d3b-4f5b-bf87-7da137060921"
   },
   {
     "id": 52,

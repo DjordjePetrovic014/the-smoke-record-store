@@ -769,6 +769,37 @@
     <div class="album-grid" id="albumGrid"></div>
     <div class="pagination" id="pagination"></div>
 
+    <!-- Album Detail Modal -->
+<div id="albumModal" class="album-modal hidden">
+  <div class="modal-content">
+  <span id="modalClose" class="modal-close">&times;</span>
+  <div class="modal-columns">
+    <!-- Leva kolona -->
+    <div class="modal-left">
+      <img id="modalCover" src="" alt="Album cover" />
+      <p><strong>Genre:</strong> <span id="modalGenre"></span></p>
+      <p><strong>Release Year:</strong> <span id="modalYear"></span></p>
+      <p><strong>Total Duration:</strong> <span id="modalDuration"></span></p>
+      <p><strong>In stock:</strong> <span id="modalStock"></span></p>
+      <p><strong>Price:</strong> $<span id="modalPrice"></span></p>
+      <div class="modal-buttons">
+        <button id="modalWatchBtn">Watch</button>
+        <button id="modalCartBtn">Add to Cart</button>
+      </div>
+    </div>
+
+    <!-- Desna kolona -->
+    <div class="modal-right">
+      <h2 id="modalTitle"></h2>
+      <p><strong>Format:</strong> <span id="modalFormat"></span></p>
+      <div id="modalTracklist"></div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+
     <!-- Vinyl vs CD Block -->
 
     <section id="vinylVsCdBlock">

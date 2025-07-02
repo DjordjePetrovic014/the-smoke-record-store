@@ -993,7 +993,7 @@ body.menu-open #sideMenu {
 
 .formats-menu li a.active {
   background-color: #fff;
-  color: #ecd0d0;
+  color: #6d6b6b;
   font-weight: bold;
   border-radius: 4px;
 }
@@ -1132,6 +1132,7 @@ body.menu-open #sideMenu {
   height: auto;
   /* border-radius: 6px; */
   margin-bottom: 1rem;
+  cursor: pointer;
 }
 
 .album-title {
@@ -1357,6 +1358,154 @@ body.menu-open #sideMenu {
   height: 25px;
   stroke: #070707;
   /* vertical-align: middle; */
+}
+/* ALBUM DETAILS */
+
+.album-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.95);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  padding: 2rem;
+}
+.album-modal::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: var(--modal-bg);
+  background-size: cover;
+  background-position: center;
+  filter: blur(30px) brightness(0.4);
+  z-index: 0;
+}
+
+.album-modal.hidden {
+  display: none;
+}
+
+.modal-content {
+  background: #ffffff14;
+  width: 100%;
+  max-width: 1000px;
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border-radius: 8px;
+  overflow-y: auto;
+  padding: 2rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+}
+
+.modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #e8e8e6;
+  cursor: pointer;
+}
+
+.modal-columns {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.modal-left,
+.modal-right {
+  flex: 1 1 300px;
+}
+
+#modalCover {
+  max-width: 100%;
+  height: auto;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+
+  /* border-radius: 6px; */
+}
+
+.modal-left p,
+.modal-right p {
+  margin: 0.3rem 0;
+  color: #e8e8e6;
+}
+
+.modal-right h2 {
+  margin-top: 0;
+  color: #e8e8e6;
+}
+
+.modal-buttons {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.modal-buttons button {
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #111;
+  color: #fff;
+  transition: background-color 0.3s ease;
+}
+
+.modal-buttons button:hover {
+  background-color: #444;
+}
+
+.tracklist {
+  counter-reset: track-number;
+  list-style: none;
+  padding-left: 0;
+  margin-top: 1rem;
+}
+
+.tracklist li {
+  counter-increment: track-number;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 1rem;
+  align-items: center;
+  padding: 0.3rem 0;
+  border-bottom: 1px solid #eeeeee1f;
+  color: #e8e8e6;
+}
+
+.tracklist li::before {
+  content: counter(track-number) ".";
+  color: #aaa;
+  min-width: 1.5rem;
+  text-align: right;
+}
+
+.track-name {
+  flex: 1;
+}
+
+.track-length {
+  color: #e8e8e6;
+  min-width: 50px;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Responsive: kolone vertikalno */
+@media (max-width: 768px) {
+  .modal-columns {
+    flex-direction: column;
+  }
 }
 
 /*   === VINYL vs CD Block ===    */
