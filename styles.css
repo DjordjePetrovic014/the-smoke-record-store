@@ -2090,7 +2090,7 @@ label[for="budgetInput"] {
 /* ========== Responsive Design ========== */
 
 /* ============================== */
-/* === Tablet Landscape (do 1280) === */
+/* === Tablet Landscape (1280) === */
 /* ============================== */
 @media screen and (max-width: 1280px) {
   /* intro-mod*/
@@ -2132,7 +2132,7 @@ label[for="budgetInput"] {
 }
 
 /* ============================== */
-/* === Tablet Portrait (do 900) === */
+/* === Tablet Portrait (900) === */
 /* ============================== */
 
 /* 📱 Tablet Portrait Mode */
@@ -2382,7 +2382,7 @@ label[for="budgetInput"] {
 }
 
 /* ============================== */
-/* === Telefon portrait (do 768px) === */
+/* === Telefon portrait ( 768px) === */
 /* ============================== */
 @media (max-width: 768px) {
   .header-background-layer,

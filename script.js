@@ -1797,10 +1797,10 @@ function calculateBBScore(
 
   // 5️⃣ PRICE
   const price = album.price;
-  if (price > 30) score += 0.32;
+  if (price > 30) score += 0.31;
   else if (price > 19) score += 0.33;
-  else if (price > 9) score += 0.34;
-  else score += 0.35; // P (<10)
+  else if (price > 9) score += 0.36;
+  else score += 0.39; // P (<10)
 
   // 6️⃣ BOOST
   score += album.boost ?? 0;

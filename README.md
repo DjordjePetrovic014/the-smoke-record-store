@@ -10,7 +10,7 @@ to help music lovers make smarter picks within their budget.
 
 ## What is the Budget Button?
 
-The Budget Button helps collectors make smart, focused choices.  
+The Budget Button helps collectors make smart, personalized picks.  
 It starts where it matters most: with your budget — and makes you want to come back to it again.
 
 #### What the Budget Button is not:
@@ -25,7 +25,7 @@ It starts where it matters most: with your budget — and makes you want to come
 #### What the Budget Button actually is:
 
 - A logic-based suggestion engine built for collectors.
-- A tool that turns your budget into a set of curated options.
+- A tool that turns your budget into a set of personalized options.
 - A system that weighs stock, price, rarity, rating and availability.
 - A way to get the most value out of what you can spend.
 - A dynamic selector, not tied to fixed filters or categories.
@@ -34,6 +34,8 @@ It starts where it matters most: with your budget — and makes you want to come
 #### What makes the Budget Button different
 
 What makes the Budget Button different is simple: it's the only button that starts by asking how much money you have — and responds with real suggestions. Each set of five picks is based on collector signals you've sent, processed through multiple music collectors-logic layers built into the system. It's not generic, not random, and not driven by trends — it's built to respect your limits and your taste.
+
+And if you think you’ve seen a button like this before — trust me, you haven’t. Not like this.
 
 ## The Budget Button: Behind the Scenes
 
@@ -106,13 +108,13 @@ _Watched albums are slightly prioritized, assuming stronger collector interest._
 
 ---
 
-**Format Multiplier**
+**Format Bonus**
 
 | Format | Multiplier | Notes                                         |
 | ------ | ---------- | --------------------------------------------- |
-| Vinyl  | ×1.07      | Slightly rewarded for higher collector appeal |
-| CD     | ×0.84      | Balanced against pricing and availability     |
-| All    | ×1.00      | No format preference selected                 |
+| Vinyl  | +1.1       | Slightly rewarded for higher collector appeal |
+| CD     | +0.84      | Balanced against pricing and availability     |
+| All    | +1.00      | No format preference selected                 |
 
 ---
 
@@ -121,10 +123,10 @@ _Watched albums are slightly prioritized, assuming stronger collector interest._
 | Stock Quantity | Score Contribution |
 | -------------- | ------------------ |
 | > 30           | 0.00               |
-| > 19           | 0.16               |
-| > 9            | 0.27               |
-| > 3            | 0.31               |
-| ≥ 1            | 0.47               |
+| > 19           | 0.20               |
+| > 9            | 0.40               |
+| > 3            | 0.60               |
+| ≥ 1            | 0.90               |
 
 _Albums with low stock are prioritized — scarcity increases their score._
 
@@ -134,10 +136,10 @@ _Albums with low stock are prioritized — scarcity increases their score._
 
 | Price Range (in $) | Score Contribution   |
 | ------------------ | -------------------- |
-| > 30               | 0.32                 |
-| > 19               | 0.43                 |
-| > 9                | 0.55                 |
-| ≤ 9                | 0.66 – P (P = price) |
+| > 30               | 0.31                 |
+| > 19               | 0.33                 |
+| > 9                | 0.36                 |
+| ≤ 9                | 0.39 – P (P = price) |
 
 _Lower-priced albums are favored — especially when they fall below $10._
 
@@ -222,7 +224,7 @@ In scenarios that include watched albums:
 - Applies globally to the filtered album pool, not inside individual pick functions.
 - Ensures varied results across sessions without breaking scoring fairness.
 
-#### Scenario System
+## Scenario System
 
 Scenarios are the core structure of how the Budget Button delivers recommendations.  
 Each scenario represents a specific combination of user-selected options (scope, format, genre),  
@@ -233,7 +235,7 @@ and triggers a predefined logic path using one or more BB methods.
 **Structure**
 
 - There are **12 base scenarios**, each covering a different set of user selections.
-- An additional **4 scenarios** are activated when the user chooses **"All"** in one or more categories (Whole Store, All Genres, or All Formats).
+- An additional **4 scenarios** - "Smart picks" are activated when the user chooses **"All"** in one or more categories (Whole Store, All Genres, or All Formats). Smart Picks are used in Scenarios 1–4 **only if the user has albums in their Watched list**, but hasn’t explicitly selected a "Watched" scenario.
 - Only **one scenario** is triggered per “Smoke It!” action.
 
 ---
@@ -241,7 +243,7 @@ and triggers a predefined logic path using one or more BB methods.
 **How they work**
 
 - Each scenario selects and processes albums from the filtered pool using a defined method or method combination (SC, PRF, SOP, Shuffle).
-- Scenarios may be built to prioritize watched albums, focus on genre or format dominance, split the store, or simulate curated digging logic.
+- Scenarios may be built to prioritize watched albums, focus on genre or format dominance, split the store, or simulate guided digging logic.
 - Each scenario returns **5 final picks**, generated according to the rules, filters and budget constraints active at that moment.
 
 ---
@@ -251,7 +253,7 @@ and triggers a predefined logic path using one or more BB methods.
 This modular system allows the Budget Button to scale, test, and combine logic paths  
 without rewriting the entire engine. Each scenario acts like a smart recipe — balancing collector behavior, user signals, and system rules.
 
-#### Scenarios Overview
+## Scenarios Overview
 
 | Scenario | Scope       | Format | Genre        |
 | -------- | ----------- | ------ | ------------ |
@@ -268,7 +270,7 @@ without rewriting the entire engine. Each scenario acts like a smart recipe — 
 | 11       | Watched     | Vinyls | Chosen Genre |
 | 12       | Watched     | CDs    | Chosen Genre |
 
-#### Scenario 1 — Whole Store / All Formats / All Genres
+### 🌀 Scenario 1 — Whole Store / All Formats / All Genres
 
 **User profile:**  
 The most open-ended scenario. The user has not selected **store scope**, **format**, or **genre**. This could mean:
@@ -302,7 +304,7 @@ The system uses a mix of `PRF` and `SCORING` methods to generate picks based on 
 `METHOD: PRF (Sorted by: Higher Rating → Lower Stock → Lower Price)`  
 → Prioritizes albums with high rating, then lower stock, then lower price.
 
-#### Scenario 2 — Whole Store / Vinyls / All Genres
+### 🌀 Scenario 2 — Whole Store / Vinyls / All Genres
 
 **User profile:**  
 The user has selected only one filter — **format: Vinyl**. This may indicate two types of users:
@@ -347,7 +349,7 @@ A mix of `SCORING` and `PRF` methods with a focus on the **vinyl** format.
 `METHOD: PRF (Sorted by: Lowest Stock → Lower Price → Higher Rating)`  
 → Selects albums following this strict sorting logic.
 
-#### Scenario 3 — Whole Store / CDs / All Genres
+### 🌀 Scenario 3 — Whole Store / CDs / All Genres
 
 **User profile:**  
 The user has selected **CD format**, but left both **genre** and **store scope** open. This suggests two possible types of users:
@@ -389,7 +391,7 @@ A mix of `SCORING` and `PRF` strategies ensures both algorithmic accuracy and cu
 `METHOD: PRF (Sorted by: Stock → Price → Rating)`  
 → Prioritizes albums with low stock, then better prices, then strong ratings.
 
-#### Scenario 4 — Whole Store / All Formats / Chosen Genre
+### 🌀 Scenario 4 — Whole Store / All Formats / Chosen Genre
 
 **User profile:**  
 The user has selected a **specific genre**, but left the **format** open. This indicates that genre matters to them, but they're open when it comes to format — either undecided or flexible.
@@ -424,7 +426,7 @@ A balance between scoring and curated picks, with duplicate filtering to ensure 
 `METHOD: PRF (Sorted by: Stock → Price → Rating)`  
 → Prioritizes rare albums (low stock), then affordable ones, then highly rated.
 
-#### Scenario 5 — Whole Store / Vinyls / Chosen Genre
+### 🌀 Scenario 5 — Whole Store / Vinyls / Chosen Genre
 
 **User profile:**  
 The user has selected both a **specific genre** and the **vinyl format**, indicating clear preferences. This could point to:
@@ -460,7 +462,7 @@ A hybrid approach using scoring and curated logic, with **duplicate filtering** 
 `METHOD: PRF (Scoring cycle: 1st tercile → 2nd → 3rd, based on lowest price)`  
 → Surfaces affordable vinyls within the chosen genre.
 
-#### Scenario 6 — Whole Store / CDs / Chosen Genre
+### 🌀 Scenario 6 — Whole Store / CDs / Chosen Genre
 
 **User profile:**  
 The user selected a **specific genre** and **CD format**, signaling a focused but potentially cost-conscious interest. This might be:
@@ -496,7 +498,7 @@ A structured mix of scoring and priority-based rotation, including **duplicate f
 `METHOD: PRF (Scoring cycle: 1st tercile → 2nd → 3rd, based on lowest price)`  
 → Highlights affordable CDs that match the user’s genre choice.
 
-#### Scenario 7 — Watched / All Formats / All Genres
+### 🌀 Scenario 7 — Watched / All Formats / All Genres
 
 **User profile:**  
 The user has selected the **Watched** collection as the source but did not specify format or genre. This suggests:
@@ -532,7 +534,7 @@ Combination of curated logic (PRF) and dominant signal analysis from the watched
 → Identifies dominant genre from **Watched**, then scores full store albums accordingly.  
 → Falls back to random selection if tied.
 
-#### Scenario 8 — Watched / Vinyls / All Genres
+### 🌀 Scenario 8 — Watched / Vinyls / All Genres
 
 **User profile:**  
 The user has selected **Watched** albums, limited to **Vinyl** format, with no genre preference. This indicates:
@@ -567,7 +569,7 @@ Mix of scoring and personalized rotation logic, including dominant genre analysi
 → Detects the dominant genre from the watched list and pulls high-rated vinyls from the full store.  
 → Falls back to random genre if there's a tie.
 
-#### Scenario 9 — Watched / CDs / All Genres
+### 🌀 Scenario 9 — Watched / CDs / All Genres
 
 **User profile:**  
 The user has selected **Watched** albums, limited to the **CD** format, with no specific genre preference. This implies:
@@ -602,7 +604,7 @@ Balanced use of scoring, rotation (PRF), and dominant genre detection for person
 → Detects the dominant genre from the user's watched list and pulls top-rated CDs from the entire store.  
 → If there's a tie in genre dominance, the genre is chosen randomly.
 
-#### Scenario 10 — Watched / All Formats / Chosen Genre
+### 🌀 Scenario 10 — Watched / All Formats / Chosen Genre
 
 **User profile:**  
 The user has selected a specific **genre**, while keeping **all formats** open and limiting the search to their **Watched** albums. This implies:
@@ -637,7 +639,7 @@ Combination of scoring and rotation (PRF) across both formats and dominant forma
 → Detects the dominant format (Vinyl or CD) from the user's watched list, and pulls top-rated albums from the whole store accordingly.  
 → If no clear dominant format, one is selected at random.
 
-#### Scenario 11 — Watched / Vinyls / Chosen Genre
+### 🌀 Scenario 11 — Watched / Vinyls / Chosen Genre
 
 **User profile:**  
 This user is focused and specific:
@@ -673,7 +675,7 @@ A mix of pure scoring, rotation logic, and deep filtering based on format and ge
 `METHOD: PRF (Whole store → Vinyls → Chosen genre → Scoring by rating)`  
 → Searches the entire store for vinyl albums within the selected genre and ranks them by highest rating.
 
-#### Scenario 12 — Watched / CDs / Chosen Genre
+### 🌀 Scenario 12 — Watched / CDs / Chosen Genre
 
 **User profile:**  
 This user is very specific:
@@ -724,7 +726,7 @@ Smart Picks are used in Scenarios 1–4 **only if the user has albums in their W
 
 ---
 
-#### Scenario 1 – Smart Pick
+### 🧠 Scenario 1 – Smart Pick
 
 **User selection:**
 
@@ -738,7 +740,7 @@ Smart Picks are used in Scenarios 1–4 **only if the user has albums in their W
 
 ---
 
-#### Scenario 2 – Smart Pick
+### 🧠 Scenario 2 – Smart Pick
 
 **User selection:**
 
@@ -752,7 +754,7 @@ Smart Picks are used in Scenarios 1–4 **only if the user has albums in their W
 
 ---
 
-#### Scenario 3 – Smart Pick
+### 🧠 Scenario 3 – Smart Pick
 
 **User selection:**
 
@@ -766,7 +768,7 @@ Smart Picks are used in Scenarios 1–4 **only if the user has albums in their W
 
 ---
 
-#### Scenario 4 – Smart Pick
+### 🧠 Scenario 4 – Smart Pick
 
 **User selection:**
 
@@ -784,8 +786,8 @@ Smart Picks are used in Scenarios 1–4 **only if the user has albums in their W
 
 ### 🔧 What’s Done So Far
 
-- **Idea:** Concept of a digital vinyl & CD record store with built-in budget assistant.
-- **Branding:** Custom-designed logo with minimalist black & white aesthetic.
+- **Idea:** Concept of a digital vinyl & CD record store with built-in Budget button assistant.
+- **Branding:** Carefully crafted name, atmosphere, and a custom-designed logo with a clean, minimalist aesthetic — all created to reflect the store’s unique identity and vibe.
 - **Technologies Used:**  
   HTML • CSS • JavaScript (Vanilla) • JSON (for data)
 
@@ -795,6 +797,11 @@ Smart Picks are used in Scenarios 1–4 **only if the user has albums in their W
   - Budget Button system with 12 dynamic scenarios + Smart Picks logic
   - Pagination and dynamic rendering of album cards
   - Basic Watch list and Cart functionality
+  - Responsive layout built for:
+    - Tablet Landscape (1280px)
+    - Tablet Portrait (900px)
+    - Phone Portrait (768px)
+  - Hamburger menu fully functional on mobile
   - Full project documentation (README) with explanation of logic & methodology
 
 ---
@@ -809,3 +816,13 @@ Smart Picks are used in Scenarios 1–4 **only if the user has albums in their W
 - Deployment to GitHub Pages or Netlify
 
 ---
+
+### Known Issues & Planned Fixes
+
+The project is still evolving, and several known issues have been identified. These will be addressed gradually in future updates:
+
+- **Cart toggle does not close on second click** — unlike the Watch panel which works correctly.
+- **"Add to Cart" not functional for Budget Button picks** — selected picks are currently not added to the cart.
+- **No message shown for empty or too small budget input** — user should see warnings like "You didn't enter a budget" or "Unfortunately, there's not enough money for suggestions."
+- **Blank picks displayed for insufficient budget** — in some scenarios, picks appear empty when budget is too low. These should be hidden.
+- **Mobile layout minor glitches** — in some breakpoints, overlay buttons overlap with text. (To be detailed further.)
