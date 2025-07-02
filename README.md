@@ -788,6 +788,12 @@ Smart Picks are used in Scenarios 1–4 **only if the user has albums in their W
 
 - **Idea:** Concept of a digital vinyl & CD record store with built-in Budget button assistant.
 - **Branding:** Carefully crafted name, atmosphere, and a custom-designed logo with a clean, minimalist aesthetic — all created to reflect the store’s unique identity and vibe.
+- **Streaming** - Carefully self-created music playlists for major platforms:
+  - TIDAL
+  - Spotify
+  - Deezer
+  - YouTube Music (YMusic)
+  - Apple music - In progress...
 - **Technologies Used:**  
   HTML • CSS • JavaScript (Vanilla) • JSON (for data)
 
@@ -826,3 +832,4 @@ The project is still evolving, and several known issues have been identified. Th
 - **No message shown for empty or too small budget input** — user should see warnings like "You didn't enter a budget" or "Unfortunately, there's not enough money for suggestions."
 - **Blank picks displayed for insufficient budget** — in some scenarios, picks appear empty when budget is too low. These should be hidden.
 - **Mobile layout minor glitches** — in some breakpoints, overlay buttons overlap with text. (To be detailed further.)
+- **Aplle music** playlist - In search of a kind volunteer with an Apple Music account who can help publish the playlist.
