@@ -47,9 +47,13 @@ When a user clicks the Budget Button, a full-screen panel opens and asks for fou
 - Budget: enter an amount in dollars
 
 Once the user confirms by clicking **“Smoke it!”**, the system filters the entire album pool based on the selected inputs.  
-Then, it automatically selects and triggers one of 12 predefined scenarios, depending on the combination of user choices.
+Then, it automatically selects and triggers one of 12 predefined scenarios and 4 smart picks, depending on the combination of user choices.
 
 Each scenario uses its own logic to analyze the filtered albums and generate five unique suggestions — ranked and scored according to availability, pricing, rating, bb score and collector-oriented methods.
+
+![Home page - BB klik](images/git-hub-screenshots/git-hub-scrnsht-01.png)
+![BB Panel](images/git-hub-screenshots/git-hub-scrnsht-02.png)
+![Budget Button results](images/git-hub-screenshots/git-hub-scrnsht-03.png)
 
 #### Parameters - album data structure
 
@@ -75,7 +79,7 @@ Not all parameters are used in every Budget Button calculation — some are opti
 #### Rules
 
 - There are 12 core scenarios in the system.
-- An additional 2 scenarios are triggered when the user selects "ALL" in one of the categories (Whole Store, All Genres, or All Formats).
+- An additional 4 scenarios are triggered when the user selects "ALL" in one of the categories (Whole Store, All Genres, or All Formats).
 - Each scenario returns 5 suggestions.
 - A single suggestion cannot contain two albums with the same title, regardless of format  
   (e.g. one vinyl and one CD version of the same album are not allowed in the same pick).
@@ -229,7 +233,7 @@ and triggers a predefined logic path using one or more BB methods.
 **Structure**
 
 - There are **12 base scenarios**, each covering a different set of user selections.
-- An additional **2 scenarios** are activated when the user chooses **"All"** in one or more categories (Whole Store, All Genres, or All Formats).
+- An additional **4 scenarios** are activated when the user chooses **"All"** in one or more categories (Whole Store, All Genres, or All Formats).
 - Only **one scenario** is triggered per “Smoke It!” action.
 
 ---
