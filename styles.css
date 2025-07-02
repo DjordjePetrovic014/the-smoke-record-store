@@ -2669,6 +2669,13 @@ label[for="budgetInput"] {
     margin-bottom: 0.4rem;
   }
 
+  .bb-results-center h2,
+  .bb-results-title {
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 0.5rem;
+  }
+
   .bb-budget-center input[type="number"] {
     font-size: 0.95rem;
     padding: 0.6rem;
