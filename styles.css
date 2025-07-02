@@ -1446,6 +1446,7 @@ body.menu-open #sideMenu {
 
 .modal-buttons {
   margin-top: 1.5rem;
+  margin-left: 3rem;
   display: flex;
   gap: 1rem;
 }
@@ -1456,8 +1457,9 @@ body.menu-open #sideMenu {
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  background-color: #111;
+  background-color: #11111112;
   color: #fff;
+  border: 1px solid #e8e8e6;
   transition: background-color 0.3s ease;
 }
 

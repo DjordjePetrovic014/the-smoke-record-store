@@ -73,7 +73,8 @@ Not all parameters are used in every Budget Button calculation — some are opti
   cover: "images/covers-thumbs/…",
   rating: 0.1,
   boost: 0, // default value
-  bbScore: // calculated based on scoring logic
+  bbScore: // calculated based on scoring logic,
+  musicbrainzId: "90caa643-67d2-4649-bc1e-01223d31a6bb"
 }
 
 ```
@@ -148,6 +149,12 @@ _Lower-priced albums are favored — especially when they fall below $10._
 **Rating**
 
 Community ratings (e.g. from [rateyourmusic.com](https://rateyourmusic.com/)) are used as part of the score, when available.
+
+---
+
+**External Metadata**
+
+Release metadata is dynamically fetched from the [MusicBrainz API](https://musicbrainz.org/) in JSON format. Retrieved information includes the **release year**, **total album duration**, **full track list**, and **duration of each track**. Original release dates are used as the reference point, based on the first edition of each album, regardless of later reissues or formats. These details are integrated into the album detail modal to enrich user experience with accurate discographic data.
 
 ---
 
@@ -798,11 +805,13 @@ Smart Picks are used in Scenarios 1–4 **only if the user has albums in their W
   HTML • CSS • JavaScript (Vanilla) • JSON (for data)
 
 - **Key Features Implemented:**
+
   - Sticky navigation with fullscreen intro section
   - Dropdown filters for Genres and Formats
   - Budget Button system with 12 dynamic scenarios + Smart Picks logic
   - Pagination and dynamic rendering of album cards
   - Basic Watch list and Cart functionality
+  - Integrated JSON-based API fetch from MusicBrainz to automatically retrieve release year, total album duration, full tracklist, and individual track durations.
   - Responsive layout built for:
     - Tablet Landscape (1280px)
     - Tablet Portrait (900px)
