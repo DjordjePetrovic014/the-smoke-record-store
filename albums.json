@@ -1341,7 +1341,8 @@
     "cover": "images/covers-thumbs/metallica-master-of-puppets-Cover-Art_result.webp",
     "rating": 0.404,
     "boost": 0,
-    "bbScore": 0
+    "bbScore": 0,
+    "musicbrainzId": "cb100c18-fb29-4828-8d24-2fdbac6d6cff"
   },
   {
     "id": 103,
@@ -1353,7 +1354,8 @@
     "cover": "images/covers-thumbs/curtis-mayfield-superfly-Cover-Art_result.webp",
     "rating": 0.408,
     "boost": 0,
-    "bbScore": 0
+    "bbScore": 0,
+    "musicbrainzId": "d3b2c39e-97da-44cb-9fe2-992e5dff8874"
   },
   {
     "id": 104,
@@ -1365,7 +1367,8 @@
     "cover": "images/covers-thumbs/fleetwood-mac-tango-in-the-night-Cover-Art_result.webp",
     "rating": 0.369,
     "boost": 0,
-    "bbScore": 0
+    "bbScore": 0,
+    "musicbrainzId": "bd84a483-049c-44ae-a33a-77c61cd516e8"
   },
   {
     "id": 105,
@@ -1377,7 +1380,8 @@
     "cover": "images/covers-thumbs/funkdoobiest-which-doobie-u-b-front-thumb.jpg",
     "rating": 0.321,
     "boost": 0,
-    "bbScore": 0
+    "bbScore": 0,
+    "musicbrainzId": "0764bf15-4424-495d-97d4-f2aa6ee3fd83"
   },
 
   {
@@ -1390,7 +1394,8 @@
     "cover": "images/covers-thumbs/the-jimi-hendrix-experience-are-you-experienced-Cover-Art_result.webp",
     "rating": 0.41,
     "boost": 0,
-    "bbScore": 0
+    "bbScore": 0,
+    "musicbrainzId": "6b050dcf-7ab1-456d-9e1b-c3c41c18eed2"
   },
   {
     "id": 107,
@@ -1402,7 +1407,8 @@
     "cover": "images/covers-thumbs/danzig-danzig-cover-art_result.webp",
     "rating": 0.366,
     "boost": 0,
-    "bbScore": 0
+    "bbScore": 0,
+    "musicbrainzId": "718e78f8-78b9-4ab1-8e55-0765335c6fc2"
   },
   {
     "id": 108,
@@ -1414,7 +1420,8 @@
     "cover": "images/covers-thumbs/keith-jarrett-the-koln-concert-Cover-Art_result.webp",
     "rating": 0.404,
     "boost": 0,
-    "bbScore": 0
+    "bbScore": 0,
+    "musicbrainzId": "43dd0b85-0f22-3fa4-80d8-e49c7310af83"
   },
   {
     "id": 109,
@@ -1426,7 +1433,8 @@
     "cover": "images/covers-thumbs/mark-knopfler-sailing-to-philadelphia-Cover-Art_result.webp",
     "rating": 0.356,
     "boost": 0,
-    "bbScore": 0
+    "bbScore": 0,
+    "musicbrainzId": "acaf3c54-d2bc-4e1b-aad7-707daccc14f3"
   },
   {
     "id": 110,
@@ -1438,7 +1446,8 @@
     "cover": "images/covers-thumbs/outkast-atliens-Cover-Art_result.webp",
     "rating": 0.406,
     "boost": 0,
-    "bbScore": 0
+    "bbScore": 0,
+    "musicbrainzId": "da1501ef-a87e-4c71-bc4d-ae0a91a53bec"
   },
   {
     "id": 111,
@@ -1450,7 +1459,8 @@
     "cover": "images/covers-thumbs/the-beatles-abbey-road-Cover-Art_result.webp",
     "rating": 0.429,
     "boost": 0,
-    "bbScore": 0
+    "bbScore": 0,
+    "musicbrainzId": "d6010be3-98f8-422c-a6c9-787e2e491e58"
   },
   {
     "id": 112,
@@ -1462,7 +1472,8 @@
     "cover": "images/covers-thumbs/the-ben-webster-quintet-soulville-Cover-Art_result.webp",
     "rating": 0.368,
     "boost": 0,
-    "bbScore": 0
+    "bbScore": 0,
+    "musicbrainzId": "71dcbefe-ac0c-4eaa-b084-ecdf43180ff2"
   },
   {
     "id": 113,
@@ -1474,7 +1485,8 @@
     "cover": "images/covers-thumbs/scarface-the-diary-Cover-Art_result.webp",
     "rating": 0.384,
     "boost": 0,
-    "bbScore": 0
+    "bbScore": 0,
+    "musicbrainzId": "6336ee8c-067b-46e8-b2d9-212f16b4e1ef"
   },
   {
     "id": 114,
@@ -1486,7 +1498,8 @@
     "cover": "images/covers-thumbs/erykah-badu-baduizm-Cover-Art_result.webp",
     "rating": 0.386,
     "boost": 0,
-    "bbScore": 0
+    "bbScore": 0,
+    "musicbrainzId": "92c85c68-e8e4-3c39-bf4e-dd9e7339427c"
   },
   {
     "id": 115,
@@ -1498,7 +1511,8 @@
     "cover": "images/covers-thumbs/bobby-womack-j_j-johnson-across-110th-street-Cover-Art_result.webp",
     "rating": 0.358,
     "boost": 0,
-    "bbScore": 0
+    "bbScore": 0,
+    "musicbrainzId": "264199ad-c21f-4a18-b507-7f9c95a3ea02"
   },
   {
     "id": 116,
@@ -1510,7 +1524,8 @@
     "cover": "images/covers-thumbs/pearl-jam-ten-front-front-thumb.jpg",
     "rating": 0.374,
     "boost": 0,
-    "bbScore": 0
+    "bbScore": 0,
+    "musicbrainzId": "8d0bc6d4-8700-44e8-90c8-b86c23e7ff14"
   },
 
   {
@@ -1523,7 +1538,8 @@
     "cover": "images/covers-thumbs/tha-dogg-pound-dogg-food-Cover-Art_result.webp",
     "rating": 0.358,
     "boost": 0,
-    "bbScore": 0
+    "bbScore": 0,
+    "musicbrainzId": "b9548299-23d4-4880-8d54-c265842dec59"
   },
   {
     "id": 118,
@@ -1535,7 +1551,8 @@
     "cover": "images/covers-thumbs/john-mayall-with-eric-clapton-blues-breakers-Cover-Art_result.webp",
     "rating": 0.36,
     "boost": 0,
-    "bbScore": 0
+    "bbScore": 0,
+    "musicbrainzId": "4c244bd1-241f-4ef6-bb44-aff9e2562c97"
   },
   {
     "id": 119,
@@ -1547,7 +1564,8 @@
     "cover": "images/covers-thumbs/canned-heat-and-john-lee-hooker-hooker-n-heat-cover-art_result.webp",
     "rating": 0.372,
     "boost": 0,
-    "bbScore": 0
+    "bbScore": 0,
+    "musicbrainzId": "fbc91a4b-b909-4ef1-8940-bdcc1f3a63e6"
   },
   {
     "id": 120,
@@ -1559,7 +1577,8 @@
     "cover": "images/covers-thumbs/chet-baker-chet-baker-sings-Cover-Art_result.webp",
     "rating": 0.385,
     "boost": 0,
-    "bbScore": 0
+    "bbScore": 0,
+    "musicbrainzId": "dc0bbfac-ccd4-4c43-a6d7-cfd8b167b137"
   },
   {
     "id": 121,
@@ -1571,7 +1590,8 @@
     "cover": "images/covers-thumbs/faith-no-more-angel-dust-Cover-Art_result.webp",
     "rating": 0.385,
     "boost": 0,
-    "bbScore": 0
+    "bbScore": 0,
+    "musicbrainzId": "c2dcc215-ab5e-38e9-8de8-6e20433a178a"
   },
   {
     "id": 122,
@@ -1583,7 +1603,8 @@
     "cover": "images/covers-thumbs/chick-corea-return-to-forever-Cover-Art_result.webp",
     "rating": 0.378,
     "boost": 0,
-    "bbScore": 0
+    "bbScore": 0,
+    "musicbrainzId": "0eae369b-d198-49da-8931-5e4533967aff"
   },
   {
     "id": 123,
@@ -1595,7 +1616,8 @@
     "cover": "images/covers-thumbs/oasis-whats-the-story-morning-glory-Cover-Art_result.webp",
     "rating": 0.371,
     "boost": 0,
-    "bbScore": 0
+    "bbScore": 0,
+    "musicbrainzId": "ed286309-6e64-48e3-835b-61aaf86cdb86"
   },
   {
     "id": 124,
@@ -1607,7 +1629,8 @@
     "cover": "images/covers-thumbs/tom-waits-rain-dogs-front-thumb.jpg",
     "rating": 0.404,
     "boost": 0,
-    "bbScore": 0
+    "bbScore": 0,
+    "musicbrainzId": "46038710-d5ed-42aa-b09e-2f467da90f11"
   },
 
   {
@@ -1620,7 +1643,8 @@
     "cover": "images/covers-thumbs/gza-liquid-swordz_result.webp",
     "rating": 0.411,
     "boost": 0,
-    "bbScore": 0
+    "bbScore": 0,
+    "musicbrainzId": "62fff24a-b6e6-4c85-9c8a-98fc2169b6d9"
   },
   {
     "id": 126,
@@ -1632,7 +1656,8 @@
     "cover": "images/covers-thumbs/smif-n-wessun-dah-shinin-Cover-Art_result.webp",
     "rating": 0.378,
     "boost": 0,
-    "bbScore": 0
+    "bbScore": 0,
+    "musicbrainzId": "d8db93ef-9821-4dae-bfd5-7ea3b0bc24c1"
   },
   {
     "id": 127,
@@ -1644,7 +1669,8 @@
     "cover": "images/covers-thumbs/jamiroquai-the-return-of-the-space-cowboy-Cover-Art_result.webp",
     "rating": 0.366,
     "boost": 0,
-    "bbScore": 0
+    "bbScore": 0,
+    "musicbrainzId": "794d78f1-20cf-496b-89c5-fe0db67cb1e7"
   },
   {
     "id": 128,
@@ -1656,7 +1682,8 @@
     "cover": "images/covers-thumbs/dr-john-the-night-tripper-gris-gris-Cover-Art_result.webp",
     "rating": 0.37,
     "boost": 0,
-    "bbScore": 0
+    "bbScore": 0,
+    "musicbrainzId": "22b80055-83d9-46a1-a441-4b0757628cf6"
   },
   {
     "id": 129,
@@ -1668,7 +1695,8 @@
     "cover": "images/covers-thumbs/the-pharcyde-bizare-ride_result.jpg",
     "rating": 0.389,
     "boost": 0,
-    "bbScore": 0
+    "bbScore": 0,
+    "musicbrainzId": "946eff9c-e3b0-48d7-af69-7f7be31364ac"
   },
   {
     "id": 130,
@@ -1680,7 +1708,8 @@
     "cover": "images/covers-thumbs/grace-jones-nightclubbing-Cover-Art_result.webp",
     "rating": 0.365,
     "boost": 0,
-    "bbScore": 0
+    "bbScore": 0,
+    "musicbrainzId": "70bad918-3388-4c06-ba27-84f5ac7767a2"
   },
   {
     "id": 131,
@@ -1692,7 +1721,8 @@
     "cover": "images/covers-thumbs/epmd-strictly-business-Cover-Art_result.webp",
     "rating": 0.372,
     "boost": 0,
-    "bbScore": 0
+    "bbScore": 0,
+    "musicbrainzId": "9382b6b6-244d-36e4-bce4-3c4fc280abcd"
   },
   {
     "id": 132,
@@ -1704,7 +1734,8 @@
     "cover": "images/covers-thumbs/ice-cube-death-certificate-Cover-Art_result.webp",
     "rating": 0.379,
     "boost": 0,
-    "bbScore": 0
+    "bbScore": 0,
+    "musicbrainzId": "291a821a-f1f3-4205-9abe-4a037c2b76ad"
   },
   {
     "id": 133,
@@ -1716,7 +1747,8 @@
     "cover": "images/covers-thumbs/the-honeydrippers-volume-one-front-thumb.jpg",
     "rating": 0.326,
     "boost": 0,
-    "bbScore": 0
+    "bbScore": 0,
+    "musicbrainzId": "eeeb1b1a-4d90-41b6-aac2-0f252df2146f"
   },
 
   {
@@ -1729,7 +1761,8 @@
     "cover": "images/covers-thumbs/buddy-guy-stone-crazy-Cover-Art_result.webp",
     "rating": 0.379,
     "boost": 0,
-    "bbScore": 0
+    "bbScore": 0,
+    "musicbrainzId": "3483f31b-8dc1-4eb4-b87d-9084d2b2077e"
   },
   {
     "id": 135,
@@ -1741,7 +1774,8 @@
     "cover": "images/covers-thumbs/john-mayer-continuum-Cover-Art_result.webp",
     "rating": 0.355,
     "boost": 0,
-    "bbScore": 0
+    "bbScore": 0,
+    "musicbrainzId": "0404cc57-a521-42f4-ab6b-02b35a555ec8"
   },
   {
     "id": 136,
@@ -1753,7 +1787,8 @@
     "cover": "images/covers-thumbs/james-brown-get-up-offa-that-thing-Cover-Art_result.webp",
     "rating": 0.375,
     "boost": 0,
-    "bbScore": 0
+    "bbScore": 0,
+    "musicbrainzId": "6c0c9fc7-2164-408b-b725-ddf662842051"
   },
   {
     "id": 137,
@@ -1765,7 +1800,8 @@
     "cover": "images/covers-thumbs/nick-cave-and-the-bad-seeds-let-love-in-Cover-Art_result.webp",
     "rating": 0.394,
     "boost": 0,
-    "bbScore": 0
+    "bbScore": 0,
+    "musicbrainzId": "7a396a2f-0580-37a7-b713-e287434c2913"
   },
   {
     "id": 138,
@@ -1777,7 +1813,8 @@
     "cover": "images/covers-thumbs/nirvana-bleach-Cover-Art_result.webp",
     "rating": 0.355,
     "boost": 0,
-    "bbScore": 0
+    "bbScore": 0,
+    "musicbrainzId": "7d166a44-cfb5-4b08-aacb-6863bbe677d6"
   },
   {
     "id": 139,
@@ -1789,7 +1826,8 @@
     "cover": "images/covers-thumbs/guns--n-roses-appetite-for-destruction_result.webp",
     "rating": 0.344,
     "boost": 0,
-    "bbScore": 0
+    "bbScore": 0,
+    "musicbrainzId": "7e1aaffd-3f00-4534-bddc-5ff88dc8600b"
   },
   {
     "id": 140,
@@ -1801,7 +1839,8 @@
     "cover": "images/covers-thumbs/onyx-all-we-got-iz-us-Cover-Art_result.webp",
     "rating": 0.375,
     "boost": 0,
-    "bbScore": 0
+    "bbScore": 0,
+    "musicbrainzId": "5b899bee-698e-4d88-a86c-f3992790e2a8"
   },
   {
     "id": 141,
@@ -1813,7 +1852,8 @@
     "cover": "images/covers-thumbs/paris-guerrilla-funk-Cover-Art_result.webp",
     "rating": 0.354,
     "boost": 0,
-    "bbScore": 0
+    "bbScore": 0,
+    "musicbrainzId": "d8535260-a287-4f19-b2c0-fe33cbcdb83f"
   },
   {
     "id": 142,
@@ -1825,7 +1865,8 @@
     "cover": "images/covers-thumbs/dinosaur-jr-bug-Cover-Art_result.webp",
     "rating": 0.373,
     "boost": 0,
-    "bbScore": 0
+    "bbScore": 0,
+    "musicbrainzId": "211993a5-fbcc-4cac-a598-934f39f56f28"
   },
   {
     "id": 143,
@@ -1837,7 +1878,8 @@
     "cover": "images/covers-thumbs/bill-withers-just-as-i-am-Cover-Art_result.webp",
     "rating": 0.381,
     "boost": 0,
-    "bbScore": 0
+    "bbScore": 0,
+    "musicbrainzId": "7e0f7789-8410-44ba-8100-78dafcb8e158"
   },
   {
     "id": 144,
@@ -1849,7 +1891,8 @@
     "cover": "images/covers-thumbs/the-roots-illadelph-halflife-Cover-Art_result.webp",
     "rating": 0.386,
     "boost": 0,
-    "bbScore": 0
+    "bbScore": 0,
+    "musicbrainzId": "c2175c1e-df6c-4b66-a559-7b73d6ac2d2e"
   },
   {
     "id": 145,
@@ -1861,7 +1904,8 @@
     "cover": "images/covers-thumbs/jimmy-smith-root-down-front-thumb.jpg",
     "rating": 0.394,
     "boost": 0,
-    "bbScore": 0
+    "bbScore": 0,
+    "musicbrainzId": "90caa643-67d2-4649-bc1e-01223d31a6bb"
   },
 
   {
@@ -1874,6 +1918,7 @@
     "cover": "images/covers-thumbs/john-coltrane-giant-steps-front-thumb.jpg",
     "rating": 0.411,
     "boost": 0,
-    "bbScore": 0
+    "bbScore": 0,
+    "musicbrainzId": "22689758-ffc1-450f-bb48-52b577077dba"
   }
 ]

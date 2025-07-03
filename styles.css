@@ -1439,6 +1439,7 @@ body.menu-open #sideMenu {
 .modal-right p {
   margin: 0.3rem 0;
   color: #e8e8e6;
+  /* letter-spacing: 1px; */
 }
 
 .modal-right h2 {

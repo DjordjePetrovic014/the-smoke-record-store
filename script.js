@@ -7433,11 +7433,11 @@ fetch("albums.json")
     renderAlbums(1, albums);
     setupPagination(albums);
 
-    // ⬇⬇⬇ OVDE dodajemo click listener TEK nakon što su albumi prikazani
+    // ⬇⬇⬇  click listener after albums showed
     document
       .getElementById("albumGrid")
       .addEventListener("click", function (e) {
-        // Pokreni samo ako je klik bio na slici
+        //
         if (!e.target.classList.contains("album-cover")) return;
 
         const albumCard = e.target.closest(".album-card");
@@ -7457,7 +7457,7 @@ fetch("albums.json")
 const modal = document.getElementById("albumModal");
 const modalClose = document.getElementById("modalClose");
 
-// Elementi unutar modala
+// Elements inside modal
 const modalCover = document.getElementById("modalCover");
 const modalGenre = document.getElementById("modalGenre");
 const modalYear = document.getElementById("modalYear");
@@ -7468,7 +7468,7 @@ const modalTitle = document.getElementById("modalTitle");
 const modalFormat = document.getElementById("modalFormat");
 const modalTracklist = document.getElementById("modalTracklist");
 
-// Glavna funkcija za otvaranje modala sa podacima
+// Main action to activate modal
 function openAlbumModal(album) {
   modalCover.src = album.cover;
   modal.style.setProperty("--modal-bg", `url(${album.cover})`); //bacground picture//
@@ -7481,10 +7481,10 @@ function openAlbumModal(album) {
   modalDuration.textContent = "Loading...";
   modalTracklist.innerHTML = "<p>Loading tracklist...</p>";
 
-  // Prikaz modala
+  // Show modal
   modal.classList.remove("hidden");
 
-  // Fetch ka MusicBrainz API-u ako postoji musicbrainzId
+  // Fetch to MusicBrainz API-u
   if (album.musicbrainzId) {
     fetch(
       `https://musicbrainz.org/ws/2/release/${album.musicbrainzId}?inc=recordings&fmt=json`
@@ -7532,7 +7532,7 @@ function openAlbumModal(album) {
   }
 }
 
-// Zatvaranje modala
+// Closing modal
 modalClose.addEventListener("click", () => {
   modal.classList.add("hidden");
 });
