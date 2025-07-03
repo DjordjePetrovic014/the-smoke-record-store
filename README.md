@@ -45,7 +45,7 @@ When a user clicks the Budget Button, a full-screen panel opens and asks for fou
 
 - Where to search: Whole Store or Watched list
 - Format: All Formats, Vinyls or CDs
-- Genre: one or all styles
+- Genre: Chose one or All genres
 - Budget: enter an amount in dollars
 
 Once the user confirms by clicking **“Smoke it!”**, the system filters the entire album pool based on the selected inputs.  
@@ -73,7 +73,7 @@ Not all parameters are used in every Budget Button calculation — some are opti
   cover: "images/covers-thumbs/…",
   rating: 0.1,
   boost: 0, // default value
-  bbScore: // calculated based on scoring logic,
+  bbScore: 2.7,// calculated based on scoring logic,
   musicbrainzId: "90caa643-67d2-4649-bc1e-01223d31a6bb"
 }
 
@@ -82,7 +82,7 @@ Not all parameters are used in every Budget Button calculation — some are opti
 #### Rules
 
 - There are 12 core scenarios in the system.
-- An additional 4 scenarios are triggered when the user selects "ALL" in one of the categories (Whole Store, All Genres, or All Formats).
+- An additional 4 scenarios (Smart picks) are triggered when the user selects "ALL" in one of the categories (Whole Store, All Genres, or All Formats).
 - Each scenario returns 5 suggestions.
 - A single suggestion cannot contain two albums with the same title, regardless of format  
   (e.g. one vinyl and one CD version of the same album are not allowed in the same pick).
@@ -284,7 +284,7 @@ The most open-ended scenario. The user has not selected **store scope**, **forma
 
 - A new visitor unfamiliar with the catalog
 - A casual browser
-- A collector asking for inspiration or curated picks
+- A collector asking for inspiration or smart personalized picks
 
 **Methodology used:**  
 The system uses a mix of `PRF` and `SCORING` methods to generate picks based on default priorities (rating, price, stock).
