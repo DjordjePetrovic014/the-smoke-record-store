@@ -33,7 +33,7 @@ It starts where it matters most: with your budget — and makes you want to come
 
 #### What makes the Budget Button different
 
-What makes the Budget Button different is simple: it's the only button that starts by asking how much money you have — and responds with real suggestions. Each set of five picks is based on collector signals you've sent, processed through multiple music collectors-logic layers built into the system. It's not generic, not random, and not driven by trends — it's built to respect your limits and your taste.
+What makes the Budget Button different is simple: it's the only button that starts by asking how much money you have — and responds with real suggestions, not just pure results. Each set of five picks is based on collector signals you've sent, processed through multiple music collectors-logic layers built into the system. It's not generic, not random, and not driven by trends — it's built to respect your limits and your taste.
 
 And if you think you’ve seen a button like this before — trust me, you haven’t. Not like this.
 
