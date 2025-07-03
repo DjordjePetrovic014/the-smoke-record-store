@@ -94,7 +94,9 @@ Not all parameters are used in every Budget Button calculation — some are opti
 #### Scoring System (BB scoring logic)
 
 The Budget Button assigns points to each album based on a combination of weighted factors.  
-Each value contributes to the album's overall `bbScore`. Below is a breakdown of how scoring is calculated.
+Each value contributes to the album's overall `bbScore`. It’s important to distinguish between `bbScore` and Rating. `bbScore`
+is a point value based on collectibility, calculated by The Smoke Record Store, while Rating reflects community-based scoring from music platforms (e.g., RateYourMusic).
+Below is a breakdown of how scoring is calculated.
 
 ---
 
