@@ -7487,7 +7487,12 @@ function openAlbumModal(album) {
   // Fetch to MusicBrainz API-u
   if (album.musicbrainzId) {
     fetch(
-      `https://musicbrainz.org/ws/2/release/${album.musicbrainzId}?inc=recordings&fmt=json`
+      `https://musicbrainz.org/ws/2/release/${album.musicbrainzId}?inc=recordings&fmt=json`,
+      {
+        headers: {
+          "User-Agent": "TheSmokeRecordStore/1.0 (djolevukas@gmail.com)",
+        },
+      }
     )
       .then((res) => res.json())
       .then((data) => {
