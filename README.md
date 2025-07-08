@@ -840,6 +840,8 @@ The project is still evolving, and several known issues have been identified. Th
 
 - **Cart toggle does not close on second click** — unlike the Watch panel which works correctly.
 - **"Add to Cart" not functional for Budget Button picks** — selected picks are currently not added to the cart.
+- **"Add to Cart and Watch button" not functional in album details modal** — not functional yet, known issue.
+- **"Checkout" option missing from Watchlist and Cart panels** — users can view selected items but cannot proceed to purchase. Feature not planned for initial release.
 - **No message shown for empty or too small budget input** — user should see warnings like "You didn't enter a budget" or "Unfortunately, there's not enough money for suggestions."
 - **Blank picks displayed for insufficient budget** — in some scenarios, picks appear empty when budget is too low. These should be hidden.
 - **Mobile layout minor glitches** — in some breakpoints, overlay buttons overlap with text. (To be detailed further.)
