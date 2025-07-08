@@ -845,4 +845,4 @@ The project is still evolving, and several known issues have been identified. Th
 - **No message shown for empty or too small budget input** — user should see warnings like "You didn't enter a budget" or "Unfortunately, there's not enough money for suggestions."
 - **Blank picks displayed for insufficient budget** — in some scenarios, picks appear empty when budget is too low. These should be hidden.
 - **Mobile layout minor glitches** — in some breakpoints, overlay buttons overlap with text. (To be detailed further.)
-- **Aplle music** playlist - In search of a kind volunteer with an Apple Music account who can help publish the playlist.
+- **Apple music** playlist - In search of a kind volunteer with an Apple Music account who can help publish the playlist.
