@@ -692,6 +692,17 @@ body.menu-open #sideMenu {
   font-family: "Outfit", sans-serif;
 }
 
+.bb-link {
+  color: white;
+  text-decoration: underline;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.bb-link:hover {
+  color: #ccc; /* ili neka svetlija nijansa da da "hover" efekat */
+}
+
 /* PICTURES */
 .about-image {
   position: relative;
