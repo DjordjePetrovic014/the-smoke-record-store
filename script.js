@@ -3471,7 +3471,7 @@ function bbScenario1Pick1(
     .sort((a, b) => b.rating - a.rating);
 
   const selected = [];
-  const usedTitles = new Set(); // Only for this suggestion
+  const usedTitles = new Set(); // Only for this suggestion - no duplicates in one Pick!!!
   let total = 0;
   let vIndex = 0;
   let cIndex = 0;

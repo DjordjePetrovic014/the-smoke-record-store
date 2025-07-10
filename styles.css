@@ -1516,6 +1516,9 @@ body.menu-open #sideMenu {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
+#modalClose{
+  fill: #e8e8e6;
+}
 
 /* Responsive: kolone vertikalno */
 @media (max-width: 768px) {
