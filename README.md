@@ -35,6 +35,8 @@ It starts where it matters most: with your budget — and makes you want to come
 
 What makes the Budget Button different is simple: it's the only button that starts by asking how much money you have — and responds with real suggestions, not just pure results. Each set of five picks is based on collector signals you've sent, processed through multiple music collectors-logic layers built into the system. It's not generic, not random, and not driven by trends — it's built to respect your limits and your taste.
 
+**The Budget Button** is designed as an e-commerce tool for making smart purchase decisions. Within _The Smoke Record Store_ project, its logic is specifically tailored to music collectors, while each industry would require its own philosophy and approach.
+
 And if you think you’ve seen a button like this before — trust me, you haven’t. Not like this.
 
 ## The Budget Button: Behind the Scenes
@@ -846,3 +848,5 @@ The project is still evolving, and several known issues have been identified. Th
 - **Blank picks displayed for insufficient budget** — in some scenarios, picks appear empty when budget is too low. These should be hidden.
 - **Mobile layout minor glitches** — in some breakpoints, overlay buttons overlap with text. (To be detailed further.)
 - **Apple music** playlist - In search of a kind volunteer with an Apple Music account who can help publish the playlist.
+- **Search Bar** and **Price range filter** - these features have not been implemented at this stage of the project, although both would be essential for a website of this type. For now, price filtering is partially handled through the Budget Button system, while development has focused on other key elements.
+- **Desktop first** - the website follows a desktop-first approach. Selected parts of the mobile UI are functional, but the visual layout is not yet fully polished. Full responsiveness is planned for a future development phase.
